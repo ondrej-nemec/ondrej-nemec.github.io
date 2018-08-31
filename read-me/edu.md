@@ -21,7 +21,7 @@ Italic: *italic*
 <?php 
 //php code
 	$a = func_get_arg(arg_num);
-``
+```
 
 ```java
 //java code
