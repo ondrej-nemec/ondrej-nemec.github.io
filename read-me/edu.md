@@ -1,8 +1,8 @@
 # title h1
 
 * [item of list - link](#href)
-    * [sub-item - link](#href)
-        * [sub-sub-item - link](#href)
+    * [item of sub-item - link](#href)
+        * [item of sub-sub-item - link](#href)
 
 ## h2
 
@@ -11,7 +11,8 @@
 Bold: **bold**
 Italic: *italic*
 > Citacion
--- [link]
+
+[link](#)
 
 
 `code`
@@ -26,4 +27,7 @@ Italic: *italic*
 ```java
 //java code
 int a = Math.max(1, 2);
-``
+```
+
+<a href="">Link</a>
+<img src="" title="Test img" alt="Test img"/>
