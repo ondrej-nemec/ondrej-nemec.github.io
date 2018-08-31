@@ -19,9 +19,11 @@ Italic: *italic*
 
 ```php
 <?php 
+//php code
 	$a = func_get_arg(arg_num);
 ``
 
 ```java
-
+//java code
+int a = Math.max(1, 2);
 ``
