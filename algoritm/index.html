@@ -1,0 +1,153 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Algoritmizace</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <h1 id="home">Základy algoritmizace</h1>
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex">
+          <a class="p-2 text-muted" href="#l0">Úvod</a>
+          <a class="p-2 text-muted" href="#l1">Proměnné</a>
+          <a class="p-2 text-muted" href="#l2">Datové struktury</a>
+          <a class="p-2 text-muted" href="#l3">Cykly</a>
+        </nav>
+      </div>
+        <hr class="featurette-divider">
+    </header>
+
+    <main role="main">
+      <div class="container marketing">
+
+        <h2 id="l0" class="featurette-heading">Úvod</h2>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <p class="lead">Základní jednoduchý tutoriál vytváření počítačových algoritmů. U každé lekce je popis, ukázka a úloha. V ukázkách kódu je mj. '//'. Toto značí vysvětlující poznámku. Ukázky vychází ze syntaxe (způsob zápisu) Javy a C#. V jiných jazycích může bých syntaxe jiná.</p>
+          </div>
+          <div class="col-md-5">
+            <p class="lead"> <code>// toto je poznámka v kódu</code></p>
+          </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <h2 id="l1" class="featurette-heading">Lekce 1: Proměnné</h2>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <p class="lead">V proměnné se udržuje hodnota, se kterou algoritmus pracuje. Tato hodnota je ale pro různé případy jiná - proměnná. Pro jednoduchost si proměnné představ jako krabičky do kterých se ukládají informace. Java a C# jsou tzv. typové jazyky, což znamená, že o každé proměnné musíš řící, jakého je typu. Nejpoužívanější primitivní datové typy jsou:
+              <ol>
+                <li>Boolean</li>
+                <p>Nabývá hodnot 'true' a  'false'. Značí, zda něco je, či není.</p>
+                <li>Integer (int)</li>
+                <p>Celé číslo</p>
+                <li>Float, double, long</li>
+                <p>Desetinná čísla, nejčastěji používán double</p>
+                <li>Character (char)</li>
+                <p>Právě jeden znak (např. písmeno, číslice, bílí znak,...)</p>
+                <li>String</li>
+                <p>Textový řetězec, libovolné znaky v libovolném počtu. POZOR: v Javě string není primitivní datový typ.</p>
+              </ol>
+            Zůstaneme-li u přirovnání ke krabičkám, v podstatě říkáš, jaký druh krabičky se má použít, jak velká krabička. Jinou krabičku potřebuješ na uložení telefonního čísla a jinou na text dopisu. <br>
+            Pokud chceš s proměnnou pracovat, je třeba ji neprve založit - inicializovat. Pak jí můžeš přiřadit hodnotu, měnit hodnotu nebo jinak s ní pracovat. Inicializace vypadá následovně: 'typ jménoPromenne;' nebo 'typ jmenoPromenne = vychoziHodnota;'. Všechny primitivní datové typy mají výchozí hodnotu automaticky.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <p class="lead"> <code>
+              //inicializace promennych <br>
+              boolean anoNe = true; <br>
+              int cislo1 = 33; <br>
+              float cislo2= f1.0; <br>
+              double cislo3 = -45.11; <br>
+              long cislo4 = 54632300000000000000000000000000000000; <br>
+              char znak = 'a'; // je nutne pouzit jednoduche uvozovky <br>
+              // C# je nutne pouzit slozene uvozovky <br>
+              string text = "zcela libovlny text"; <br>
+              // Java je nutne pouzit slozene uvozovky<br>
+              String text = "zcela libovlny text"; <br>
+              <br>
+              // prace s promennou  <br>
+              int vekManzela = 30; <br>
+              int vekZeny = 28; <br>
+              int vekovyRozdil = vekManzela - vekZeny;
+            </code></p>
+          </div>
+          <div>
+           <h3>Úloha</h3>
+           Jakě typy jsou nejvýhodnější pro uložení telefonního čísla, ceny, emailu, poznávací značky, pohlaví?  <br>
+           Napiš algoritmus, který prohodí hodnoty dvou proměnných 'a' a 'b' libovolného typu.
+          </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <h2 id="l2" class="featurette-heading">Lekce 2: Datové struktury</h2>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <p class="lead"></p>
+          </div>
+          <div class="col-md-5">
+            <p class="lead"> <code></code></p>
+          </div>
+          <div>
+           <h3>Úloha</h3>
+          </div>
+        </div>
+        <hr class="featurette-divider">
+
+        <h2 id="l3" class="featurette-heading">Lekce 3: Cykly</h2>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <p class="lead"></p>
+          </div>
+          <div class="col-md-5">
+            <p class="lead"> <code></code></p>
+          </div>
+          <div>
+           <h3>Úloha</h3>
+          </div>
+        </div>
+        <hr class="featurette-divider">
+<!-- lection 
+        <h2 id="" class="featurette-heading">Lekce : </h2>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          </div>
+          <div class="col-md-5">
+            <p class="lead"> <code>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</code></p>
+          </div>
+        </div>
+        <hr class="featurette-divider">
+end lection -->
+
+      </div>
+
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <!--
+      <script src="../../assets/js/vendor/popper.min.js"></script>
+    -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
