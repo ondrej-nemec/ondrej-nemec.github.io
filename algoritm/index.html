@@ -35,7 +35,8 @@
         <h2 id="l0" class="featurette-heading">Úvod</h2>
         <div class="row featurette">
           <div class="col-md-7">
-            <p class="lead">Základní jednoduchý tutoriál vytváření počítačových algoritmů. U každé lekce je popis, ukázka a úloha. V ukázkách kódu je mj. '//'. Toto značí vysvětlující poznámku. Ukázky vychází ze syntaxe (způsob zápisu) Javy a C#. V jiných jazycích může bých syntaxe jiná.</p>
+            <p class="lead">Základní jednoduchý tutoriál vytváření počítačových algoritmů. U každé lekce je popis, ukázka a úloha. V ukázkách kódu je mj. '//'. Toto značí vysvětlující poznámku. Ukázky vychází ze syntaxe (způsob zápisu) Javy a C#. V jiných jazycích může bých syntaxe jiná.
+            </p>
           </div>
           <div class="col-md-5">
             <p class="lead"> <code>// toto je poznámka v kódu</code></p>
@@ -46,7 +47,7 @@
         <h2 id="l1" class="featurette-heading">Lekce 1: Proměnné</h2>
         <div class="row featurette">
           <div class="col-md-7">
-            <p class="lead">V proměnné se udržuje hodnota, se kterou algoritmus pracuje. Tato hodnota je ale pro různé případy jiná - proměnná. Pro jednoduchost si proměnné představ jako krabičky do kterých se ukládají informace. Java a C# jsou tzv. typové jazyky, což znamená, že o každé proměnné musíš řící, jakého je typu. Nejpoužívanější primitivní datové typy jsou:
+            <p class="lead">V proměnné se udržuje hodnota, se kterou algoritmus pracuje. Tato hodnota je ale pro různé případy jiná - proměnná. Pro jednoduchost si proměnné představ jako krabičky do kterých se ukládají informace. Java a C# jsou tzv. typové jazyky, což znamená, že o každé proměnné musíš říci, jakého je typu. Při výuce algoritmů budeš nejčastěji používat primitivní datové typy, přičemž nejpoužívanější jsou:
               <ol>
                 <li>Boolean</li>
                 <p>Nabývá hodnot 'true' a  'false'. Značí, zda něco je, či není.</p>
@@ -55,12 +56,14 @@
                 <li>Float, double, long</li>
                 <p>Desetinná čísla, nejčastěji používán double</p>
                 <li>Character (char)</li>
-                <p>Právě jeden znak (např. písmeno, číslice, bílí znak,...)</p>
+                <p>Právě jeden znak (např. písmeno, číslice, bílý znak,...)</p>
                 <li>String</li>
                 <p>Textový řetězec, libovolné znaky v libovolném počtu. POZOR: v Javě string není primitivní datový typ.</p>
               </ol>
+            Na všechna čísla lze použít základní matematické operace (+, -, /, *, modulo). Pomocí '+' se skládají stringy do nových stringů. Skládáním charů vznikají stringy. <br>
             Zůstaneme-li u přirovnání ke krabičkám, v podstatě říkáš, jaký druh krabičky se má použít, jak velká krabička. Jinou krabičku potřebuješ na uložení telefonního čísla a jinou na text dopisu. <br>
-            Pokud chceš s proměnnou pracovat, je třeba ji neprve založit - inicializovat. Pak jí můžeš přiřadit hodnotu, měnit hodnotu nebo jinak s ní pracovat. Inicializace vypadá následovně: 'typ jménoPromenne;' nebo 'typ jmenoPromenne = vychoziHodnota;'. Všechny primitivní datové typy mají výchozí hodnotu automaticky.
+            Pokud chceš s proměnnou pracovat, je třeba ji neprve založit - inicializovat. Pak jí můžeš přiřadit hodnotu, měnit hodnotu nebo jinak s ní pracovat. Inicializace vypadá následovně: 'typ jménoPromenne;' nebo 'typ jmenoPromenne = vychoziHodnota;'. Všechny primitivní datové typy mají výchozí hodnotu automaticky. <br>
+            Lze změnit datový typ nějaké proměnné? Ano, přetypováním: '(novyTyp) jmenoPromenne'. Jakékoliv číslo lze přetypovat na jiný typ čísla. Cokoliv lze přetypovat na String.
             </p>
           </div>
           <div class="col-md-5">
@@ -71,22 +74,65 @@
               float cislo2= f1.0; <br>
               double cislo3 = -45.11; <br>
               long cislo4 = 54632300000000000000000000000000000000; <br>
-              char znak = 'a'; // je nutne pouzit jednoduche uvozovky <br>
-              // C# je nutne pouzit slozene uvozovky <br>
-              string text = "zcela libovlny text"; <br>
-              // Java je nutne pouzit slozene uvozovky<br>
-              String text = "zcela libovlny text"; <br>
+              char znak = 'a'; // je nutne pouzit jednoduche uvozovky <br> <br>
+              // C# <br>
+              string text = "zcela libovlny text"; // je nutne pouzit slozene uvozovky <br>
+              // Java <br>
+              String text = "zcela libovlny text"; // je nutne pouzit slozene uvozovky <br>
               <br>
               // prace s promennou  <br>
               int vekManzela = 30; <br>
               int vekZeny = 28; <br>
-              int vekovyRozdil = vekManzela - vekZeny;
-            </code></p>
+              int vekovyRozdil = vekManzela - vekZeny; // hodnota je 2 <br> <br>
+
+              String pozdrav = "Ahoj"; <br>
+              // jak na konec pridat vykricnik? <br>
+              //prvni zpusob <br>
+              pozdrav = pozdrav + "!"; <br>
+              //druhy zpusob <br>
+              pozdrav += "!"; <br> <br>
+
+              //pretypovani <br>
+              int vychoziCislo = 42; <br>
+              String cislo = (String) vychoziCislo; <br>
+              double cislo1 = 12.2; <br>
+              int cislo2 = (double) cislo1; // cislo2 je 12! <br>
+
+              </code></p>
           </div>
           <div>
            <h3>Úloha</h3>
-           Jakě typy jsou nejvýhodnější pro uložení telefonního čísla, ceny, emailu, poznávací značky, pohlaví?  <br>
+           Jakě typy jsou nejvýhodnější pro uložení telefonního čísla, ceny, emailu, poznávací značky, pohlaví?
+           <button class="" onclick="show('r1');">Řešení</button>  <br>
+           <div class="hidden" id="r1">
+              Možná řešení:
+              <ol>
+                <li>Telefonní číslo</li>
+                <p>Integer, lze i String, pokud chceš psát číslo s mezerami nebo s předvolbou.</p>
+                <li>Ceny</li>
+                <p>Float, double, long</p>
+                <li>Email</li>
+                <p>String</p>
+                <li>Poznávací značky</li>
+                <p>String</p>
+                <li>Pohlaví</li>
+                <p>Boolean, stačí se rozhodnout, zda true znamená muž nebo žena :-). Lze použít i String, do kterého si uložíš například "muž", "žena". Pak můžeš mít i možnost "neuvedeno".</p>
+              </ol>
+           </div>
            Napiš algoritmus, který prohodí hodnoty dvou proměnných 'a' a 'b' libovolného typu.
+           <button class="" onclick="show('r2');">Řešení</button>  <br>
+          <div class="hidden" id="r2">
+              <code>
+                //zadani <br>
+              String a = "text 1"; <br>
+              String b = "text 2"; <br>
+              //reseni <br>
+              String pomocna = a; <br>
+              a = b; <br>
+              b = pomocna; <br>
+              //nyni je v 'a' "text 2" a v 'b' "text 1"
+              </code>
+           </div>
           </div>
         </div>
         <hr class="featurette-divider">
@@ -101,6 +147,11 @@
           </div>
           <div>
            <h3>Úloha</h3>
+
+            <button class="" onclick="show('r');">Řešení</button>  <br>
+           <div class="hidden" id="r">
+           </div>
+
           </div>
         </div>
         <hr class="featurette-divider">
@@ -115,6 +166,11 @@
           </div>
           <div>
            <h3>Úloha</h3>
+
+            <button class="" onclick="show('r');">Řešení</button>  <br>
+           <div class="hidden" id="r">
+           </div>
+
           </div>
         </div>
         <hr class="featurette-divider">
@@ -122,10 +178,18 @@
         <h2 id="" class="featurette-heading">Lekce : </h2>
         <div class="row featurette">
           <div class="col-md-7">
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead"></p>
           </div>
           <div class="col-md-5">
-            <p class="lead"> <code>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</code></p>
+            <p class="lead"> <code></code></p>
+          </div>
+          <div>
+           <h3>Úloha</h3>
+           
+            <button class="" onclick="show('r');">Řešení</button>  <br>
+           <div class="hidden" id="r">
+           </div>
+
           </div>
         </div>
         <hr class="featurette-divider">
@@ -137,7 +201,7 @@ end lection -->
       <!-- FOOTER -->
       <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2017-2018 Ondřej Němec &middot; <a href="https://github.com/ondrej-nemec" target=_blank>GitHub</a></p>
       </footer>
     </main>
 
@@ -149,5 +213,10 @@ end lection -->
       <script src="../../assets/js/vendor/popper.min.js"></script>
     -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function show(selector) {
+        $('#' + selector).css("display", "block");
+      }
+    </script>
   </body>
 </html>
