@@ -189,7 +189,34 @@
         <h2 id="l3" class="featurette-heading">Lekce 3: Cykly</h2>
         <div class="row featurette">
           <div class="col-md-7">
-            <p class="lead"></p>
+            <p class="lead">Každného trochu přemýšlivého člověka napadlo, že pokud má pole o např. 1 000 prvcích, je 'trochu' nepraktické naplňovat jej hodnotami po jednom (dlouhePole[0] = ..., dlouhePole[1] = ..., dlouhePole[1000] = ...). Právě na tom lze dobře pochopit funkci cyklů. Představíme si tři: for, while a foreach cyklus.
+
+            <h3>For cyklus</h3>
+            Ukázka: <br>
+            for (int promenna = 0; promenna < 10; i = i+1) { <br>
+                  System.out.println(promenna); // vypis v Javě, v C# je jine <br>
+            } <br>
+            Nasledující kód vypíše pod sebe čísla od 0 do 9. <br>
+            Uvnitř kulatých závorek - za slovem for - se nejprve definuje proměnná, pomocí které se prochází cyklus. Nejčastěji je to integer, ale může to být libovolný typ čísla. Za středníkem je podmínka. Dokud podmínka platí, cyklus bude probíhat. Za druhým středníkem se definuje, co se má stát s proměnnou. Do složených závorek se vkládá kód, který se má provádět. <br>
+            Popis ukázky: for cyklus dosadí do proměnné promenna nulu, zkontruluje, zda je promenna menší než 10, vypíše do konzole nulu a proměnnou promenna zvětší o jedna. Tak to pokračuje, až je promenna = 10, v tu chvíli neplatí, že promenna < 10, a cyklus zkončí, aniž by vypsal do konzole desítku.
+
+            <h3>While cyklus</h3>
+            Ukázka:  <br>
+            int promenna = 0;
+            while (promenna < 10) {  <br>
+                System.out.println(promenna); <br>
+                promenna++; <br>
+            } <br>
+            Předchozí ukázka provede totéž jako ukázka for cyklu. While cyklus se provádí, dokud platí podmínka v závorkách. Rozdíl mezi for a while cyklem: for cyklus se provádí x krát, kde x je předem známé. U while cyklu není obvykle předem známo, kolikrát se provede. Tudíž ukázka while cyklu není úplně přesná. <br>
+
+            <h3>Foreach cyklus</h3>
+            Ukázka: <br>
+            String[] pole = new String[] {"aa", "bb", "cc"}; <br>
+            for (String polozka : pole) { <br>
+                System.out.println(polozka);<br>
+            } <br>
+            Předhozí ukázka vypíše podsebe jednotlivé položky pole. Pomocí foreach cyklu je možné procházet cokoli, co je "iterable", což v našem tutoriálu je pouze pole. V kulaté závorce se nejprve definuje typ, který je uložen v poli, pak proměnná, do které se postupně ukládají jednotlivé položky pole. Za dvojtečku se uvede, které pole se má iterovat.
+            </p>
           </div>
           <div class="col-md-5">
             <p class="lead"> <code></code></p>
