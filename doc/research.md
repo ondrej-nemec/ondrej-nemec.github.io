@@ -1,5 +1,5 @@
 # Strukturované formáty - research
-## CSV
+## [CSV](https://cs.wikipedia.org/wiki/CSV)
 ```csv
 1995,Opel,Vectra,"klimatizace, stresni okno",45000
 1998,Skoda,"Felicia ""Fun""",,80000
@@ -8,14 +8,12 @@ bourani",70000
 ```
 Soubor ve formátu CSV sestává z řádků,
  ve kterých jsou jednotlivé položky odděleny znakem čárka (,).
-Hodnoty polo?ek mohou b?t uzav?eny do uvozovek ("), co? umo??uje,
-aby text polo?ky obsahoval ??rku. Pokud text polo?ky
+Hodnoty položek mohou být uzavřeny do uvozovek ("), což umožňuje,
+aby text položky obsahoval čárku. Pokud text položky
 obsahuje uvozovky, jsou tyto zdvojeny.
-Nem? koment??e
-**????**
-M??e b?t text v jednoduch?ch uvozovk?ch?
+Nemá komentáře, text nemůže být v jednoduchých uvozovkách
 
-## JSON
+## [JSON](https://cs.wikipedia.org/wiki/JavaScript_Object_Notation)
 ```json
 {
     "0": 1,
@@ -45,36 +43,36 @@ M??e b?t text v jednoduch?ch uvozovk?ch?
     }
 }
 ```
-Vstupem je libovoln? datov? struktura (??slo, ?et?zec, boolean, objekt nebo z nich slo?en? pole), v?stupem je v?dy ?et?zec. Slo?itost hierarchie vstupn? prom?nn? nen? teoreticky nijak omezena.
-JSON um? pojmout pole hodnot (neindexovan? i indexovan?, tzv. hash), objekty (coby pole dvojic index:hodnota) a jednotliv? hodnoty, kter?mi mohou b?t ?et?zce, ??sla (cel? i s pohyblivou ??dovou ??rkou) a speci?ln? hodnoty true, false a null. Indexy pol? v objektu maj? notaci jako ?et?zce; ?et?zce jsou uv?d?ny v uvozovk?ch a escapov?ny pomoc? zp?tn?ho lom?tka. Mezi prvky a hodnotami mohou b?t libovoln? b?l? znaky, kter? na v?sledku nic nem?n?.
-Nem? koment??e
+Vstupem je libovolná datová struktura (číslo, řetězec, boolean, objekt nebo z nich složené pole), výstupem je vždy řetězec. Složitost hierarchie vstupní proměnné není teoreticky nijak omezena.
+JSON umí pojmout pole hodnot (neindexované i indexované, tzv. hash), objekty (coby pole dvojic index:hodnota) a jednotlivé hodnoty, kterými mohou být řetězce, čísla (celá i desetinná) a speciální hodnoty true, false a null. Indexy polí v objektu mají notaci jako řetězce; řetězce jsou uvedeny v uvozovkách a escapovány pomocí zpětného lomítka. Mezi prvky a hodnotami mohou být libovolné bílé znaky, které na výsledku nic nemění.
+Nemá komentáře
 
-## XML
+## [XML](https://cs.wikipedia.org/wiki/Extensible_Markup_Language)
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
-<!-- Poznamka je nutn? p?idat v?ce recept?. -->
-<recept jm?no="chleba" ?as_p??pravy="5 minut" ?as_va?en?="3 hodiny">
-  <titulek>Jednoduch? chleba</titulek>
-  <p??sada mno?stv?="3" jednotka="??lky">Mouka</p??sada>
-  <p??sada mno?stv?="0,25" jednotka="unce">Kvasnice</p??sada>
-  <p??sada mno?stv?="1,5" jednotka="??lku">Hork? voda</p??sada>
-  <p??sada mno?stv?="1" jednotka="k?vov? l?i?ka">S?l</p??sada>
+<!-- Poznamka -->
+<recept jmeno="chleba" cas_pripravy="5 minut" cas_vareni="3 hodiny">
+  <titulek>Jednoduchý chleba</titulek>
+  <prisada mnozstvi="3" jednotka="unce">Mouka</prisada>
+  <prisada mnozstvi="0,25" jednotka="unce">Kvasnice</prisada>
+  <prisada mnozstvi="1,5" jednotka="unce">Horká voda</prisada>
+  <prisada mnozstvi="1" jednotka="unce">Sůl</prisada>
   <empty />
   <empty></empty>
   <postup>
-    <krok>Sm?chejte v?echny p??sady dohromady a dob?e prohn??te.</krok>
-    <krok>Zakryjte tkaninou a nechejte hodinu v tepl? m?stnosti.</krok>
-    <krok>Znovu prohn??te, um?st?te na plech a pe?te v troub?.</krok>
+    <krok>asaaaaaaaaaaaaaaaaaaaaaa</krok>
+    <krok>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</krok>
+    <krok>cccccccccccccccccccccccccc</krok>
   </postup>
 </recept>
 ```
-Mus? m?t pr?v? jeden ko?enov? (root) element.
-Nepr?zdn? elementy mus? b?t ohrani?eny startovac? a ukon?ovac? zna?kou. Pr?zdn? elementy mohou b?t ozna?eny tagem ?pr?zdn? element?.
-V?echny hodnoty atribut? mus? b?t uzav?eny v uvozovk?ch ? jednoduch?ch (') nebo dvojit?ch ("), ale jednoduch? uvozovka mus? b?t uzav?ena jednoduchou a dvojit? dvojitou. Opa?n? p?r uvozovek m??e b?t pou?it uvnit? hodnot.
-Elementy mohou b?t vno?eny, ale nemohou se p?ekr?vat; to znamen?, ?e ka?d? (ne ko?enov?) element mus? b?t cel? obsa?en v jin?m elementu.
-Jm?na element? v XML rozli?uj? mal? a velk? p?smena: nap?. ?<P??klad>? a ?</P??klad>? je p?r, kter? vyhovuje spr?vn? strukturovan?mu dokumentu, p?r ?<P??klad>? a ?</p??klad>? je chybn?.
+Musí mít právě jeden kořenový (root) element.
+Neprázdný elementy musí být ohraničeny startovací a ukončovací značkou. Prázdné elementy mohou být označeny tagem prázdný element.
+Všechny hodnoty atributů musí být uzavřeny v uvozovkách jednoduchých (') nebo dvojitých ("), ale jednoduchá uvozovka musí být uzavřena jednoduchou a dvojitá dvojitou. Opačný pár uvozovek může být použit uvnitř hodnot.
+Elementy mohou být vnořeny, ale nemohou se překrývat; to znamená, že každý (ne kořenový) element musí být celý obsažen v jiném elementu.
+Jména elementů v XML rozlišují malá a velká písmena: např. <Priklad> a </Priklad> je pár, který vyhovuje správně strukturovanému dokumentu, pár <Priklad> a </priklad> je chybný.
 
-## NEON
+## [NEON](https://doc.nette.org/cs/2.4/neon)
 ```neon
 # my web application config
 
@@ -111,7 +109,7 @@ vs
 }
 ```
 
-## YAML
+## [YAML](https://cs.wikipedia.org/wiki/YAML)
 ```yaml
  # Toto je pozn?mka
  # pole
@@ -120,17 +118,17 @@ vs
  - Mandarinky
  
  # mapa
- Bo?ena N?mcov?: Babi?ka
- Ernest Hemingway: Sta?ec a mo?e
- Douglas Addams: Stopa??v pr?vodce po Galaxii
+ Božena Němcová: Babička
+ Ernest Hemingway: Stařec a moře
+ Douglas Addams: Stopařův průvodce po Galaxii
  
  # dokument
  --- # Seznam knih
- Autor: Bo?ena N?mcov?
- Kniha: Babi?ka
+ Autor: Božena Němcová
+ Kniha: Babička
  ---
  Autor: Ernest Hemingway
- Kniha: Sta?ec a mo?e
+ Kniha: Stařec a moře
  ...
  
  
@@ -147,7 +145,7 @@ vs
     Road to the Emerald City.
     Pay no attention to the
     man behind the curtain.
-  # Nov? ??dky budou zam?n?ny za mezery, ?vodn? mezery budou vynech?ny.
+  # Nove radky budou zameneny za mezery, uvodni mezery budou vynechany.
   
   # asociativni pole
   - {name: John Smith, age: 33}
@@ -161,28 +159,28 @@ vs
     {0: John Smith, 1: Bill Jones}
     
     ---
-	a: 123                     # cel? ??slo
-	b: "123"                   # ?et?zec, vynuceno uvozovkami
-	c: 123.0                   # ??slo s plovouc? desetinnou ??rkou
-	d: !!float 123             # ditto, p?etypov?n? vynuceno kl??ov?m slovem
-	e: !!str 123               # p?etypov?n? pro ?et?zec, jako b)
+	a: 123                     # cele cislo
+	b: "123"                   # retezec, vynuceno uvozovkami
+	c: 123.0                   # cislo s plovouci desetinnou carkou
+	d: !!float 123             # ditto, pretypovani vynuceno klicovym slovem
+	e: !!str 123               # pretypovani pro retezec, jako b)
 	g: Yes                     # boolean
 	f: No                      # boolean
-	h: !!str Yes               # ?et?zec, p?etypov?n? vynuceno kl??ov?m slovem
-	i: Yes we have No bananas  # ?et?zec
-	---                        # bin?rn? data (base64)
+	h: !!str Yes               # retezec, pretypovani vynuceno klicovym slovemm
+	i: Yes we have No bananas  # retezec
+	---                        # binarni data (base64)
 	picture: !!binary |
 	  R0lGODlhDAAMAIQAAP//9/X
 	  17unp5WZmZgAAAOfn515eXv
 	  Pz7Y6OjuDg4J+fn5OTk6enp
 	  56enmleECcgggoBADs=mZmE
 ```
-?itelnost nejen strojem, ale i ?lov?kem
-struktura a hierarchie dat je ?e?ena indentac? (p?edsazen?m)
-p?edsazen? o jednu ?rove? sest?v? ze 2 nebo 4 mezer; tabul?tory nejsou povoleny.
-neomezen? ?rovn? vno?ov?n?
+čitelnost nejen strojem, ale i člověkem
+struktura a hierarchie dat je dosažena indentací (předsazením)
+předsazení o jednu úroveň sestává ze 2 nebo 4 mezer; tabulátory nejsou povoleny.
+neomezeně úovní vnořovoní
 
-## .env
+## [.env](https://www.npmjs.com/package/dotenv)
 ```
 DB_HOST=localhost
 DB_USER=root
@@ -201,9 +199,9 @@ line'}
 * inner quotes are maintained (think JSON) (JSON={"foo": "bar"} becomes {JSON:"{\"foo\": \"bar\"}")
 * whitespace is removed from both ends of the value (see more on trim) (FOO=" some value " becomes {FOO: 'some value'})
 
-## MD
+## [MD](https://cs.wikipedia.org/wiki/Markdown)
 ```md
-==P??klad u?it?==
+==Příklad==
 {|class="wikitable"
 ! width="33%" | Zdrojov? text ve form?tu jazyka Markdown
 ! width="33%" | Zdrojov? text ve form?tu [[HyperText Markup Language|HTML]]
