@@ -1,5 +1,4 @@
 repository: ondrej-nemec/ondrej-nemec.github.io
 encoding: UTF-8
 # Build settings
-markdown:   
-  parse_block_html: true
+markdown: kramdown
