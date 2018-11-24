@@ -1,4 +1,12 @@
 # Strukturované formáty - research
+* [CSV](#csv)
+* [JSON](#json)
+* [XML](#xml)
+* [YAML](#yaml)
+* [NEON](#neon)
+* [ENV](#.env)
+* [MD](#md)
+
 ## [CSV](https://cs.wikipedia.org/wiki/CSV)
 ```csv
 1995,Opel,Vectra,"klimatizace, stresni okno",45000
