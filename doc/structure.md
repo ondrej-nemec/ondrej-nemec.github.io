@@ -1,5 +1,6 @@
 # Projects hiearchy
 ## Desctop app
+```
 |_.git
 |_src
   |_main
@@ -15,8 +16,10 @@
 |_LICENCE
 |_pom.xml
 |_.gitignore
+```
 
 ## Web app
+```
 |_.git
 |_src ...
 //TODO
@@ -27,5 +30,8 @@
 |_LICENCE
 |_pom.xml
 |_.gitignore
+```
 
 ## Android app
+```
+```

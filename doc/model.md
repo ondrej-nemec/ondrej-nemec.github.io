@@ -49,8 +49,8 @@ objekt
 			<td>Začátek objektu</td>
 			<td>začátek řádku</td>
 			<td>{</td>
-			<td>&lt;jmeno&gt; <br>prázný objekt &lt;jmeno /&gt;</td>
-			<td></td>
+			<td>&lt;jmeno&gt; <br>prázný objekt: &lt;jmeno /&gt;</td>
+			<td>začátek řádku</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -60,7 +60,7 @@ objekt
 			<td>'/n'</td>
 			<td>}</td>
 			<td>&lt;/jmeno&gt;</td>
-			<td></td>
+			<td>:</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -70,7 +70,7 @@ objekt
 			<td>není </td>
 			<td>není</td>
 			<td>&lt;jmeno mezera</td>
-			<td></td>
+			<td>od začátku řádku k ":"</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -80,7 +80,7 @@ objekt
 			<td>není</td>
 			<td>"jmeno":</td>
 			<td>jmeno="hodnota" mezera</td>
-			<td></td>
+			<td>"\t" od objektu, k ":"</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -90,7 +90,7 @@ objekt
 			<td>není</td>
 			<td>[hodnota, hodnota]</td>
 			<td>ne</td>
-			<td></td>
+			<td>- hodnota jednotlivé řádky <br> - {hodnota, hodnota}</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -110,7 +110,7 @@ objekt
 			<td>""</td>
 			<td>\"</td>
 			<td>\"</td>
-			<td></td>
+			<td>\"</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -120,7 +120,7 @@ objekt
 			<td>ne</td>
 			<td>ne</td>
 			<td>ano, escape \'</td>
-			<td></td>
+			<td>ano</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -130,7 +130,7 @@ objekt
 			<td>ne</td>
 			<td>ne</td>
 			<td>ne</td>
-			<td></td>
+			<td>#</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -140,7 +140,7 @@ objekt
 			<td>ne</td>
 			<td>ne</td>
 			<td>&lt;!-- text --&gt;</td>
-			<td></td>
+			<td>ne</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -150,7 +150,7 @@ objekt
 			<td>ne</td>
 			<td>ano</td>
 			<td>ano</td>
-			<td></td>
+			<td>ano</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -160,7 +160,7 @@ objekt
 			<td>ano</td>
 			<td>ne</td>
 			<td>ne</td>
-			<td></td>
+			<td>ano</td>
 			<td></td>
 			<td></td>
 			<td></td>
@@ -176,21 +176,21 @@ objekt
 			<td></td>
 		</tr>
 		<tr>
+			<td>Víceřádkový text</td>
+			<td>jen v uvozovkách</td>
 			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>ano</td>
+			<td> | text o tab dále</td>
 			<td></td>
 			<td></td>
 			<td></td>
 		</tr>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>Víceřádkový text s ignorováním nového řádku</td>
+			<td>ne</td>
+			<td>ne</td>
+			<td>ne</td>
+			<td>&gt; nový řádek text o tab dále</td>
 			<td></td>
 			<td></td>
 			<td></td>
