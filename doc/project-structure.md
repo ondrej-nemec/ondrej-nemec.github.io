@@ -1,7 +1,7 @@
 # Projects hiearchy
 ## Desctop app
 ```
-|-.git
+|_.git
 |_src
   |_main
     |_java
