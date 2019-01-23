@@ -3,15 +3,15 @@
 ```
 |_.git
 |_src
-  |_main
-    |_java
-    |_resource
-      |_migrations
-      |_terminal
-      |_translations
-  |_test
-    |_java
-    |_resource
+| |_main
+| | |_java
+| | |_resource
+| |   |_migrations
+| |   |_terminal
+| |   |_translations
+| |_test
+|   |_java
+|   |_resource
 |_readme.md
 |_LICENCE
 |_pom.xml
