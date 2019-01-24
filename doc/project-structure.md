@@ -1,5 +1,6 @@
 # Projects hiearchy
 ## Desctop app
+<a href="structures/project.zip">Download</a>
 ```
 |_.git
 |_src
@@ -67,10 +68,23 @@
 ```
 
 ## Web app
+<a href="structures/web.zip">Download</a>
 ```
 |_.git
-|_src ...
-//TODO
+|_src
+| |_main
+| | |_java
+| | |_resource
+| |   |_migrations
+| |   |_terminal
+| |   |_translations
+| |_test
+|   |_java
+|   |_resource
+|_WebContent
+| |_META-INF
+| |_WEB-INF
+|   |_web.xml
 |_sitemap.xml
 |_.htacess
 |_robots.txt
@@ -159,6 +173,7 @@ DirectoryIndex paths
 ```
 
 ## Android app
+<a href="structures/.zip">Download</a>
 ```
 ```
 
