@@ -78,6 +78,7 @@
 |_LICENCE
 |_pom.xml
 |_.gitignore
+```
 
 ### pom.xml
 ```xml
@@ -134,7 +135,6 @@
 </project>
 ```
 
-```
 ### sitemap.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
