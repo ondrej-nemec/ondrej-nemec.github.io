@@ -1,6 +1,6 @@
 # Projects hiearchy
 ## Desctop app
-<a href="structures/project.zip">Download</a>
+<a href="https://ondrej-nemec.github.io/structures/project.zip">Download</a>
 ```
 |_.git
 |_src
@@ -68,7 +68,7 @@
 ```
 
 ## Web app
-<a href="structures/web.zip">Download</a>
+<a href="https://ondrej-nemec.github.io/structures/web.zip">Download</a>
 ```
 |_.git
 |_src
@@ -173,7 +173,7 @@ DirectoryIndex paths
 ```
 
 ## Android app
-<a href="structures/.zip">Download</a>
+<a href="https://ondrej-nemec.github.io/structures/.zip">Download</a>
 ```
 ```
 
