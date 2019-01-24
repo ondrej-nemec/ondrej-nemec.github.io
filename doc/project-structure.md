@@ -13,6 +13,7 @@
 | |_test
 |   |_java
 |   |_resource
+|_libs
 |_readme.md
 |_LICENCE
 |_pom.xml
@@ -85,6 +86,7 @@
 | |_META-INF
 | |_WEB-INF
 |   |_web.xml
+|_libs
 |_sitemap.xml
 |_.htacess
 |_robots.txt
