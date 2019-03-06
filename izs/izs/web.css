@@ -1,0 +1,11 @@
+table, table th, table td {border: 1px solid white; color: black; border-collapse: collapse;}
+table td {padding: 1ex;}
+table {margin: 1em; background-color: lightgreen;}
+/*table {border: 3; color:#FF0000; background-color:#ACFFDA; border-collapse: collapse; margin: 2em;}
+a { color: #CAE3FF; background-color: #000000;}
+td { color: #000000;}
+th { color: #000000;}*/
+body {background-image: url("pozadi.png"); color: white;}
+.flow {float: left; margin: 1ex;}
+.vyr {clear: both;}
+p {text-align: center;}
