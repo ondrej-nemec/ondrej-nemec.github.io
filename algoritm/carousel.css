@@ -1,4 +1,6 @@
-/* GLOBAL STYLES
+.logic tr th, .logic tr td {
+  padding: 1ex;
+}
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
