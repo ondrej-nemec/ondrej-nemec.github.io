@@ -1,10 +1,9 @@
 .logic tr th, .logic tr td {
   padding: 1ex;
 }
--------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-.hidden {display: none;}
+div.hidden {display: none;}
 
 body {
   padding-top: 3rem;
