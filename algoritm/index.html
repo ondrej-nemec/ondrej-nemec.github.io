@@ -241,7 +241,7 @@
           <!-- -->
           <div class="col-md-7">
             <h3>Switch</h3>
-            <p class="lead">Pokud máš nějakou proměnou a potřebuješ rozhodnout na základě její hodnoty, přičemž může nabívat mnoha hodnot, hodí se <code>switch</code>. Do závorek se doplní proměnná a jednotlivé hodnoty se uvádí v <code>case</code> části. Pokud je potřeba, lze uvést <code>default</code>, který se použije, pokud se žádná z předchozích hodnot neshoduje. Na konci kódu za <code>case</code> je nutné uvést <code>braak</code>, jinak se provede i kód u dalšího <code>case</code>.</p>          
+            <p class="lead">Pokud máš nějakou proměnou a potřebuješ rozhodnout na základě její hodnoty, přičemž může nabívat mnoha hodnot, hodí se <code>switch</code>. Do závorek se doplní proměnná a jednotlivé hodnoty se uvádí v <code>case</code> části. Pokud je potřeba, lze uvést <code>default</code>, který se použije, pokud se žádná z předchozích hodnot neshoduje. Na konci kódu za <code>case</code> je nutné uvést <code>break</code>, jinak se provede i kód u dalšího <code>case</code>.</p>          
           </div>
           <div class="col-md-5">
             <p class="lead"> <code>
@@ -289,14 +289,68 @@
             <p class="lead"> <code></code></p>
           </div>
 
-          <div>
-           <h3>Úloha</h3>
-
-            <button class="" onclick="show('r');">Řešení</button>  <br>
-           <div class="hidden" id="r">
+           <div>
+            <h3>Úloha</h3>
+            Máš proměnnou 'number' typu integer. Pokud je její hodnota 0, vypiš "Zero" (použij konstrukci 'out(text);'), pokud je hodnota mezi 4 a více a menší než 8, vypiš "Interval", v ostatních případech vypiš "None".
+            <button class="" onclick="show('r5');">Řešení</button>  <br>
+            <div class="hidden" id="r5">
+              <code>
+                if (number == 0) { <br>
+                &emsp;out("Zero"); <br>
+                } else if (number >= 4 && number < 8) { <br>
+                &emsp;out("Interval"); <br>
+                } else { <br>
+                &emsp;out("None"); <br>
+                } <br>
+              </code>
+            </div>
+              V proměnné 'input' typu char je uložen znak. Do proměnné 'output' (typ: text) vlož text podle následujícího zadání:
+                <table>
+                  <tr>
+                    <th>Input</th>
+                    <th>Output</th>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>This is Sparta!</td>
+                  </tr>
+                  <tr>
+                    <td>Y, R, B</td>
+                    <td>You are bee</td>
+                  </tr>
+                  <tr>
+                    <td>D, O, M</td>
+                    <td>Old MacDonald</td>
+                  </tr>
+                  <tr>
+                    <td>Cokoli jiného</td>
+                    <td>I don't know this</td>
+                  </tr>
+                </table>
+            <button class="" onclick="show('r6');">Řešení</button>  <br>
+            <div class="hidden" id="r6">
+              <code>
+                String output = ""; <br>
+                switch (input) { <br>
+                &emsp;case 'S': <br>
+                &emsp;&emsp;output = "This is Sparta!"; <br>
+                &emsp;&emsp;break; <br>
+                &emsp;case 'Y': <br>
+                &emsp;case 'R': <br>
+                &emsp;case 'B': <br>
+                &emsp;&emsp;output = "You are bee"; <br>
+                &emsp;&emsp;break; <br>
+                &emsp;case 'D': <br>
+                &emsp;case 'O': <br>
+                &emsp;case 'M': <br>
+                &emsp;&emsp;output = "Old MacDonald"; <br>
+                &emsp;&emsp;break; <br>
+                &emsp;default: <br>
+                &emsp;&emsp;output = "I don't know this"; <br>
+                } <br>
+              </code>
+            </div>
            </div>
-
-          </div>
         </div>
         <hr class="featurette-divider">
 
@@ -350,14 +404,32 @@
             }</code></p>
           </div>
 
-          <div>
-           <h3>Úloha</h3>
-
-            <button class="" onclick="show('r');">Řešení</button>  <br>
-           <div class="hidden" id="r">
+           <div>
+            <h3>Úloha</h3>
+            Projdi pole čísel 'arrayOfNumber' a vypiš každé druhé
+            <button class="" onclick="show('r7');">Řešení</button>  <br>
+            <div class="hidden" id="r7">
+              Je tu více řešení, asi to nejkratší: <br>
+              <code>
+                for (int i = 1; i < arrayOfNumber.length; i = i+2) { <br>
+                &emsp;out(arrayOfNumber[i]); <br>
+                } <br>
+              </code>
+            </div>
+            Vytvoř číslo 'number' s hodnotou 2. Násob jej postupně dvěma, dokud nedostaneš číslo 2048, jednotlivé mezivýpočty vypisuj. Program tedy postupně vypíše čísla:
+            2, 4, 8, 16, 32, 64, 128, 256, 1028, 2048.
+            <button class="" onclick="show('r8');">Řešení</button>  <br>
+            <div class="hidden" id="r8">
+              <code>
+                int number = 2; <br>
+                out(number); <br>
+                while (number <= 2048) { <br>
+                &emsp;number = number * 2; <br>
+                &emsp;out(number); <br>
+                } <br>
+              </code>
+            </div>
            </div>
-
-          </div>
         </div>
         <hr class="featurette-divider">
 <!-- lection 
