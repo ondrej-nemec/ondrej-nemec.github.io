@@ -1,0 +1,14 @@
+version: '2.4'
+services:
+  java:
+  # docker-compose exec -w /project java sh
+  # docker-compose exec -w /project java ./gradlew
+    init: true
+    image: openjdk:15-jdk-alpine
+   # build:
+   #   context: docker/java
+    volumes:
+      - .:/project # read only in production?
+    restart: always
+    # command: /bin/sh -c /project/hotspot/bin/hotspot
+    command: tail -f /dev/null
