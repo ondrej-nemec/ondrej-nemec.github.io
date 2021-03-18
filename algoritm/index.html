@@ -25,6 +25,7 @@
           <a class="p-2 text-muted" href="#l2">Datové struktury</a>
           <a class="p-2 text-muted" href="#l3">Podmínky a větvení</a>
           <a class="p-2 text-muted" href="#l4">Cykly</a>
+          <a class="p-2 text-muted" href="#b1">Break, Continue</a>
         </nav>
       </div>
         <hr class="featurette-divider">
@@ -35,11 +36,11 @@
 
         <h2 id="l0" class="featurette-heading">Úvod</h2>
         <div class="row featurette">
-          <div class="col-md-7">
-            <p class="lead">Základní jednoduchý tutoriál vytváření počítačových algoritmů. U každé lekce je popis, ukázka a úloha. V ukázkách kódu je mj. '//'. Toto značí vysvětlující poznámku. Ukázky vychází ze syntaxe (způsob zápisu) Javy a C#. V jiných jazycích může bých syntaxe jiná. Hodně jazyků požaduje zakončení řádku znakem ';'. Budu se toho držet i v ukázkách.
+          <div class="col-md-6">
+            <p class="lead">Základní jednoduchý tutoriál vytváření počítačových algoritmů. U každé lekce je popis, ukázka a úloha. V ukázkách kódu je mj. <code>//</code>. Toto značí vysvětlující poznámku. Ukázky vychází ze syntaxe (způsob zápisu) Javy a C#. V jiných jazycích může být syntaxe jiná. Hodně jazyků požaduje zakončení řádku znakem <code>;</code>. Budu se toho držet i v ukázkách.
             </p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> 
               <code>// toto je poznámka v kódu</code> <br>
               <code>/* toto je poznámka <br> v kódu <br> na více řádcích */</code>
@@ -50,7 +51,7 @@
 
         <h2 id="l1" class="featurette-heading">Lekce 1: Proměnné</h2>
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <p class="lead">V proměnné se udržuje hodnota, se kterou algoritmus pracuje. Tato hodnota je ale pro různé případy jiná - proměnná. Pro jednoduchost si proměnné představ jako krabičky do kterých se ukládají informace. Java a C# jsou tzv. typové jazyky, což znamená, že o každé proměnné musíš říci, jakého je typu. Při výuce algoritmů budeš nejčastěji používat primitivní datové typy, přičemž nejpoužívanější jsou:</p>
               <ol class="lead">
                 <li>Boolean</li>
@@ -69,7 +70,7 @@
             Pokud chceš s proměnnou pracovat, je třeba ji neprve založit - inicializovat. Pak jí můžeš přiřadit hodnotu, měnit hodnotu nebo jinak s ní pracovat. Inicializace vypadá následovně: 'typ jménoPromenne;' nebo 'typ jmenoPromenne = vychoziHodnota;'. Všechny primitivní datové typy mají výchozí hodnotu automaticky. <br>
             Lze změnit datový typ nějaké proměnné? Ano, přetypováním: '(novyTyp) jmenoPromenne'. Jakékoliv číslo lze přetypovat na jiný typ čísla. Cokoliv lze přetypovat na String.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code>
               //inicializace promennych <br>
               boolean anoNe = true; <br>
@@ -153,11 +154,11 @@
 
         <h2 id="l2" class="featurette-heading">Lekce 2: Datové struktury</h2>
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <p class="lead">Někdy je potřeba pracovat s více souvisejícími proměnnými. Lze definovat první proměnnou, druhou až třeba stou. Místo tohoto nešikovného řešení je lepší použít něco, co drží více proměnných naráz - datovou strukturu. Zde si ukážeme tzv. pole. V Javě a C# může být v poli jen jeden datový typ a má fixní velikost - od začátku má danou velikost (tebou zadanou) a tu nelze měnit. Pole obsahuje prvky. Ke každému se lze dostat zadáním pozice - indexu. POZOR: indexuje se od 0.</p>
             <p class="lead">Vložení prvku do pole na danou pozici: 'jmenoPole[pozice] = hodnota'. Získání hodnoty na dané pozici: 'jmenoPole[pozice]'. Bývá užitečné vědět, jak je pole velké. Velikost pole získáš: 'jmenoPole.length'.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code>
               // inicializace pole integeru <br>
               int[] poleIntu; <br>
@@ -201,18 +202,18 @@
 
         <h2 id="l3" class="featurette-heading">Lekce 3: Podmínky a větvení</h2>
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <p class="lead">Základní konstrukcí ve všech jazyků jsou podmínky - co když, co jinak. Ve většině jazyků včetně Javy a C# jsou dva způsoby <code>If-else</code> a <code>switch</code>.</p>          
           </div>
           <div class="col-md-5">
             <p class="lead"> <code></code></p>
           </div>
           <!-- -->
-          <div class="col-md-7">
+          <div class="col-md-6">
             <h3>If elseif else</h3>
             <p class="lead">Podmínka začíná <code>if</code>, v jednoduchých závorkách následuje výraz, který jazyk vyhodnocuje, zda je pravda nebo nepravda. Výrazem může být cokoliv, co lze vyhodnotit jako pravda/nepravda. Více proměných se skládá pomocí logického A - <code>&</code> - a logického NEBO - <code>|</code>. Opak se tvoří pomocí <code>!</code>. </p>         
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code>
               // jednoducha podminka <br>
               if (vyraz) { <br>
@@ -227,9 +228,9 @@
               } <br><br>
 
               // vice vetvena podminka <br>
-              if (vyraz) { <br>
+              if (vyraz1) { <br>
               &emsp;&emsp; // pokud je podminka splnena<br>
-              } else if (vyraz) { // muze se opakovat vicekrat <br>
+              } else if (vyraz2) { // muze se opakovat vicekrat <br>
               &emsp;&emsp; // pokud prvni podminka neni splnena a druha je<br>
               } else { <br>
               &emsp;&emsp; //jinak <br>
@@ -239,11 +240,11 @@
             </code></p>
           </div>
           <!-- -->
-          <div class="col-md-7">
+          <div class="col-md-6">
             <h3>Switch</h3>
             <p class="lead">Pokud máš nějakou proměnou a potřebuješ rozhodnout na základě její hodnoty, přičemž může nabívat mnoha hodnot, hodí se <code>switch</code>. Do závorek se doplní proměnná a jednotlivé hodnoty se uvádí v <code>case</code> části. Pokud je potřeba, lze uvést <code>default</code>, který se použije, pokud se žádná z předchozích hodnot neshoduje. Na konci kódu za <code>case</code> je nutné uvést <code>break</code>, jinak se provede i kód u dalšího <code>case</code>.</p>          
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code>
               switch (promenna) { <br>
               &emsp;case hodnota1: break; // zde se nic neprovede <br>
@@ -261,7 +262,7 @@
             </code></p>
           </div>
           <!-- -->
-          <div class="col-md-7">
+          <div class="col-md-6">
             <h3>Výroková logika</h3>
             <p class="lead">
               <table class="logic">
@@ -285,13 +286,13 @@
               </table>
             </p>           
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code></code></p>
           </div>
 
            <div>
             <h3>Úloha</h3>
-            Máš proměnnou 'number' typu integer. Pokud je její hodnota 0, vypiš "Zero" (použij konstrukci 'out(text);'), pokud je hodnota mezi 4 a více a menší než 8, vypiš "Interval", v ostatních případech vypiš "None".
+            Máš proměnnou 'number' typu integer. Pokud je její hodnota 0, vypiš "Zero" (použij konstrukci 'out(text);'), pokud je hodnota 4 a více a menší než 8, vypiš "Interval", v ostatních případech vypiš "None".
             <button class="" onclick="show('r5');">Řešení</button>  <br>
             <div class="hidden" id="r5">
               <code>
@@ -356,32 +357,32 @@
 
         <h2 id="l4" class="featurette-heading">Lekce 4: Cykly</h2>
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <p class="lead">Každného trochu přemýšlivého člověka napadlo, že pokud má pole o např. 1 000 prvcích, je 'trochu' nepraktické naplňovat jej hodnotami po jednom (dlouhePole[0] = ..., dlouhePole[1] = ..., dlouhePole[1000] = ...). Právě na tom lze dobře pochopit funkci cyklů. Představíme si tři: for, while a foreach cyklus.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code></code></p>
           </div>
           <!-- -->
-          <div class="col-md-7">
+          <div class="col-md-6">
             <h3>For cyklus</h3>
             <p class="lead">Nasledující kód vypíše pod sebe čísla od 0 do 9. <br>
             Uvnitř kulatých závorek - za slovem for - se nejprve definuje proměnná, pomocí které se prochází cyklus. Nejčastěji je to integer, ale může to být libovolný typ čísla. Za středníkem je podmínka. Dokud podmínka platí, cyklus bude probíhat. Za druhým středníkem se definuje, co se má stát s proměnnou. Do složených závorek se vkládá kód, který se má provádět. <br>
             Popis ukázky: for cyklus dosadí do proměnné promenna nulu, zkontruluje, zda je promenna menší než 10, vypíše do konzole nulu a proměnnou promenna zvětší o jedna. Tak to pokračuje, až je promenna = 10, v tu chvíli neplatí, že promenna < 10, a cyklus zkončí, aniž by vypsal do konzole desítku.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"><code>
               // for <br>
-            for (int promenna = 0; promenna < 10; i = i+1) { <br>
+            for (int promenna = 0; promenna < 10; promenna = promenna+1) { <br>
             &emsp;&emsp;System.out.println(promenna); // vypis v Javě, v C# je jine <br>
             }</code></p>
           </div>
           <!-- -->
-          <div class="col-md-7">
+          <div class="col-md-6">
             <h3>While cyklus</h3>
             <p class="lead">Předchozí ukázka provede totéž jako ukázka for cyklu. While cyklus se provádí, dokud platí podmínka v závorkách. Rozdíl mezi for a while cyklem: for cyklus se provádí x krát, kde x je předem známé. U while cyklu není obvykle předem známo, kolikrát se provede. Tudíž ukázka while cyklu není úplně přesná.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code>
             // while <br>            
             int promenna = 0;
@@ -391,11 +392,11 @@
             }</code></p>
           </div>
           <!-- -->
-          <div class="col-md-7">
+          <div class="col-md-6">
             <h3>Foreach cyklus</h3>
             <p class="lead">Předhozí ukázka vypíše podsebe jednotlivé položky pole. Pomocí foreach cyklu je možné procházet cokoli, co je "iterable", což v našem tutoriálu je pouze pole. V kulaté závorce se nejprve definuje typ, který je uložen v poli, pak proměnná, do které se postupně ukládají jednotlivé položky pole. Za dvojtečku se uvede, které pole se má iterovat.</p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code>
             // for each <br>
             String[] pole = new String[] {"aa", "bb", "cc"}; <br>
@@ -432,13 +433,59 @@
            </div>
         </div>
         <hr class="featurette-divider">
+
+        <h2 id="b1" class="featurette-heading">Bonus : Break, continue</h2>
+        <div class="row featurette">
+          <div class="col-md-6">
+            <h3>Break</h3>
+            <p class="lead"><code>Break</code> ukončí provádění aktuálního bloku, obvykle ohraničeného <code>{}</code>. Viz switch. Při použití v bloku cyklu, cyklus ukončí.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="lead"> <code>
+              // vypise postupne 1, 7, 8 <br>
+              int[] intArray = new int[] {1, 7, 8, 2, 2, 3, 4};<br>
+              for (int i : intArray) {<br>
+              &emsp;&emsp;if (i == 2) {<br>
+              &emsp;&emsp;&emsp;break;<br>
+              &emsp;&emsp;}<br>
+              &emsp;&emsp;System.out.println(i);<br>
+              }<br>
+            </code></p>
+          </div>
+
+          <div class="col-md-6">
+            <h3>Continue</h3>
+            <p class="lead">Používá se v cyklech. Ukončí aktuální krok cyklu a skočí na další.</p>
+          </div>
+          <div class="col-md-6">
+            <p class="lead"> <code>
+              // vypise postupne 1, 7, 8, 3, 4 <br>
+              int[] intArray = new int[] {1, 7, 8, 2, 2, 3, 4};<br>
+              for (int i : intArray) {<br>
+              &emsp;&emsp;if (i == 2) {<br>
+              &emsp;&emsp;&emsp;continue;<br>
+              &emsp;&emsp;}<br>
+              &emsp;&emsp;System.out.println(i);<br>
+              }<br>
+            </code></p>
+          </div>
+         <!--  <div>
+           <h3>Úloha</h3>
+           
+            <button class="" onclick="show('r');">Řešení</button>  <br>
+           <div class="hidden" id="r">
+           </div>
+
+          </div>-->
+        </div>
+        <hr class="featurette-divider">
 <!-- lection 
         <h2 id="" class="featurette-heading">Lekce : </h2>
         <div class="row featurette">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <p class="lead"></p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <p class="lead"> <code></code></p>
           </div>
           <div>
