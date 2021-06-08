@@ -15,8 +15,8 @@
 
 	<script type="text/javascript">
 		window.onload = function() {
-			init([
-				{
+			init({
+				main: {
 					img: {
 						src: "alchimie-3.png"
 					},
@@ -25,7 +25,8 @@
 					width: 1,
 					height: 1,
 					listeners: {}
-				},{
+				},
+				click: {
 					img: {
 						src: "alchimie-2.png"
 					},
@@ -34,13 +35,63 @@
 					width: 0.05,
 					height: 0.05,
 					listeners: {
-						click: function(element) {
+						click: function(event, element, elements) {
 							element.top = 0.8;
 							// console.log("click");
 						}
 					}
+				},
+				place: {
+					img: {
+						src: "alchimie-1.png"
+					},
+					top: 0.2,
+					left: 0.3,
+					width: 0.1,
+					height: 0.1,
+					listeners: {
+						mousedown: function(event, element, elements) {
+							element.selected = true;
+							element.diffHeight = event.relativeHeight - element.top;
+							element.diffWidth = event.relativeWidth - element.left;
+							element.originTop = element.top;
+							element.originLeft = element.left;
+						},
+						mouseup: function(event, element, elements) {
+							var place = elements["move"];
+							if (
+								event.relativeHeight > place.top 
+								&& event.relativeHeight < place.top + place.height
+								&& event.relativeWidth > place.left
+								&& event.relativeWidth < place.left + place.width) {
+								// nothing - ok
+							} else {
+								element.top = element.originTop;
+								element.left = element.originLeft;
+							}
+							element.selected = false;
+							
+						},
+						mousemove: function(event, element, elements) {
+							if (element.selected) {
+								element.top = event.relativeHeight - element.diffHeight;
+								element.left = event.relativeWidth - element.diffWidth;
+							}
+						}
+					}
+				},
+				move: {
+					top: 0.8,
+					left: 0.2,
+					width: 0.1,
+					height: 0.1,
+					listeners: {
+						mousemove: function(event, element, elements) {
+							
+						}
+					}
 				}
-			], 1261, 997).then(function(canvas) {
+			}, 1261, 997).then(function(canvas) {
 				document.body.appendChild(canvas);
 			//	draw(canvas);
 			});

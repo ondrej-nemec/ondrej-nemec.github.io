@@ -1,29 +1,20 @@
 async function init(configs, baseWidth, baseHeight) {
-	var elements = [];
 	var counter = 0;
-	configs.forEach(function(config) {
-		var object = {
-			top: config.top,
-			left: config.left,
-			width: config.width,
-			height: config.height
-		};
+	for (const[index, config] of Object.entries(configs)) {
 		var element = null;
 		if (config.hasOwnProperty("img")) {
 			element = new Image();
 			element.src = config.img.src;
 			element.onload = function() { counter++; };
+		} else {
+			counter++;
 		}
-		object.element = element;
-		for (const[name, listener] of Object.entries(config.listeners)) {
-			object[name] = listener;
-		}
-		elements.push(object);
-	});
+		config.element = element;
+	}
 	
 	var promise = new Promise((res, rej) => {
 		var checkCounter = function() {
-			if (counter === elements.length) {
+			if (counter === Object.keys(configs).length) {
 				res("DONE");
 			} else {
 				setTimeout(checkCounter, 10);
@@ -33,7 +24,7 @@ async function init(configs, baseWidth, baseHeight) {
     });
     var canvas = document.createElement("canvas");
     await promise.then(function() {
-    	print(canvas, elements, baseWidth, baseHeight);
+    	print(canvas, configs, baseWidth, baseHeight);
     });
     return canvas;
 }
@@ -50,16 +41,18 @@ function print(canvas, elements, baseWidth, baseHeight) {
 	    draw(canvas, elements, baseWidth, baseHeight);
 	}, true);
 
-	["click"].forEach(function(eventName) {
+	["click", "mousedown", "mouseup", "mousemove"].forEach(function(eventName) {
 		canvas.addEventListener(eventName, function(event) {
 			var width = toRelative(event.pageX, minWidth, currentWidth);
 			var height = toRelative(event.pageY, minHeight, currentHeight);
 			var action = false;
+			event.relativeWidth = width;
+			event.relativeHeight = height;
 			for (const[key, element] of Object.entries(elements)) {
-				if (element.hasOwnProperty(eventName)) {
+				if (element.listeners.hasOwnProperty(eventName)) {
 					if (height > element.top && height < element.top + element.height 
 			            && width > element.left && width < element.left + element.width) {
-		            	element[eventName](element, elements);
+		            	element.listeners[eventName](event, element, elements);
 		            	action = true;
 		            }
 		        }
@@ -90,13 +83,15 @@ function draw(canvas, elements, baseWidth, baseHeight) {
 	minHeight = (bodyH - currentHeight) / 2;
 
 	for (const[index, object] of Object.entries(elements)) {
-		ctx.drawImage(
-			object.element,
-			fromRelative(object.left, minWidth, currentWidth),
-			fromRelative(object.top, minHeight, currentHeight),
-			object.width * currentWidth, 
-			object.height * currentHeight
-		);
+		if (object.element instanceof Image) {
+			ctx.drawImage(
+				object.element,
+				fromRelative(object.left, minWidth, currentWidth),
+				fromRelative(object.top, minHeight, currentHeight),
+				object.width * currentWidth, 
+				object.height * currentHeight
+			);
+		}
 	}
 }
 
