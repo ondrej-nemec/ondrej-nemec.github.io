@@ -1,0 +1,178 @@
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		body {
+			background-color: black;
+		}
+	</style>
+	<script src="draw.js"></script>
+</head>
+<body>
+
+
+
+	<script type="text/javascript">
+		window.onload = function() {
+			init([
+				{
+					img: {
+						src: "alchimie-3.png"
+					},
+					top: 0,
+					left: 0,
+					width: 1,
+					height: 1,
+					listeners: {}
+				},{
+					img: {
+						src: "alchimie-2.png"
+					},
+					top: 0.5,
+					left: 0.5,
+					width: 0.05,
+					height: 0.05,
+					listeners: {
+						click: function(element) {
+							element.top = 0.8;
+							// console.log("click");
+						}
+					}
+				}
+			], 1261, 997).then(function(canvas) {
+				document.body.appendChild(canvas);
+			//	draw(canvas);
+			});
+    	};
+	/*
+    	window.onload = function() {
+			init().then(print);
+    	};
+		
+		var baseWidth;
+		var baseHeight;
+
+		var canvas = document.createElement("canvas");
+		document.body.appendChild(canvas);
+	
+		async function init() {
+			var elements = [];
+			var counter = 0;
+			
+
+			var background = new Image();
+			background.src = "alchimie-3.png";
+			background.onload = function() {
+				baseHeight = background.height;
+				baseWidth = background.width;
+				counter++;
+			};
+			elements.push({
+				element: background,
+				top: 0,
+				left: 0,
+				width: 1,
+				height: 1
+			});
+
+	    	var image = new Image();
+			image.src = "alchimie-2.png";
+			image.onload = function() { counter++; };
+			elements.push({
+				element: image,
+				top: 0.5,
+				left: 0.5,
+				width: 0.05,
+				height: 0.05,
+				click: function(element) {
+					element.top = 0.8;
+					// console.log("click");
+				}
+			});
+			
+			var promise = new Promise((res, rej) => {
+				var checkCounter = function() {
+					if (counter === elements.length) {
+						res("DONE");
+					} else {
+						setTimeout(checkCounter, 10);
+					}
+				};
+		        checkCounter();
+		    });
+		    await promise;
+		    return elements;
+		}
+
+		
+    	window.addEventListener('resize', function(event) {
+		    draw();
+		}, true);
+
+    	var elements = [];
+    	function print(objects) {
+    		elements = objects;
+    		draw();
+    	}
+    	var currentWidth = 0;
+    	var currentHeight = 0;
+    	var minWidth = 0;
+    	var minHeight = 0;
+    	var ctx = canvas.getContext("2d");
+    	function draw(objects = null) {
+    		console.log("draw");
+
+    		var bodyW = document.body.offsetWidth;
+	    	var bodyH = document.body.offsetHeight;
+
+			canvas.setAttribute("width", bodyW);
+			canvas.setAttribute("height", bodyH);
+			var k = Math.min(bodyW / baseWidth, bodyH / baseHeight);
+
+			currentWidth = k * baseWidth;
+			currentHeight = k * baseHeight;
+			minWidth = (bodyW - currentWidth) / 2;
+			minHeight = (bodyH - currentHeight) / 2;
+
+			for (const[index, object] of Object.entries(elements)) {
+				ctx.drawImage(
+					object.element,
+					fromRelative(object.left, minWidth, currentWidth),
+					fromRelative(object.top, minHeight, currentHeight),
+					object.width * currentWidth, 
+					object.height * currentHeight
+				);
+			}
+    	}
+    	
+		canvas.addEventListener('click', function(event) {
+			var width = toRelative(event.pageX, minWidth, currentWidth);
+			var height = toRelative(event.pageY, minHeight, currentHeight);
+			var action = false;
+			for (const[key, element] of Object.entries(elements)) {
+		         if (element.hasOwnProperty("click")) {
+	 				if (height > element.top && height < element.top + element.height 
+			            && width > element.left && width < element.left + element.width) {
+		            	element.click(element, elements);
+		            	action = true;
+		            }
+		        }
+			}
+			if (action) {
+				draw();
+			}
+		}, false);
+
+    	function toRelative(value, min, le) {
+    		return (value - min) / le;
+    	}
+
+    	function fromRelative(value, min, le) {
+    		return value * le + min;
+    	}
+    	*/
+	</script>
+
+</body>
+</html>
