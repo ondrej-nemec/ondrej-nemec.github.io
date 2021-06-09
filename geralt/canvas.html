@@ -86,10 +86,52 @@
 					width: 0.1,
 					height: 0.1,
 					listeners: {
-						mousemove: function(event, element, elements) {
-							
+						mouseenter: function(event, element, elements) {
+							elements["rect"] = {
+								top: event.relativeHeight,
+								left: event.relativeWidth,
+								width: 0.1,
+								height: 0.1,
+								type: "rect",
+								rect: {
+									color: "black"
+								},
+								listeners: {}
+							};
+							elements["rect-text"] = {
+								top: event.relativeHeight + 0.05,
+								left: event.relativeWidth + 0.01,
+								width: 0.1,
+								height: 0.1,
+								type: "text",
+								text: {
+									color: "white",
+									size: 20,
+								//	textAlign: "center",
+									value: "Hello!"
+								},
+								listeners: {}
+							};
+						},
+						mouseleave: function(event, element, elements) {
+							delete elements["rect"];
+							delete elements["rect-text"];
 						}
 					}
+				},
+				message: {
+					type: "text",
+					text: {
+						value: "Hello World!",
+						size: 20,
+						font: "Ariel",
+						color: "white"
+					},
+					top: 0.5,
+					left: -0.1,
+					width: 0.1,
+					height: 0.1,
+					listeners: {}
 				}
 			}, 1261, 997).then(function(canvas) {
 				document.body.appendChild(canvas);

@@ -41,7 +41,9 @@ function print(canvas, elements, baseWidth, baseHeight) {
 	    draw(canvas, elements, baseWidth, baseHeight);
 	}, true);
 
-	["click", "mousedown", "mouseup", "mousemove"].forEach(function(eventName) {
+	[
+		"click","mousedown", "mouseup", "mousemove"
+	].forEach(function(eventName) {
 		canvas.addEventListener(eventName, function(event) {
 			var width = toRelative(event.pageX, minWidth, currentWidth);
 			var height = toRelative(event.pageY, minHeight, currentHeight);
@@ -62,6 +64,40 @@ function print(canvas, elements, baseWidth, baseHeight) {
 			}
 		}, false);
 	});
+	canvas.addEventListener("mousemove", function(event) {
+		var width = toRelative(event.pageX, minWidth, currentWidth);
+		var height = toRelative(event.pageY, minHeight, currentHeight);
+		var action = false;
+		event.relativeWidth = width;
+		event.relativeHeight = height;
+		for (const[key, element] of Object.entries(elements)) {
+			if (!element.listeners.hasOwnProperty("mouseenter") && !element.listeners.hasOwnProperty("mouseleave")) {
+				continue;
+			}
+			if (height > element.top && height < element.top + element.height 
+		         && width > element.left && width < element.left + element.width) {
+				if (element.listeners.hasOwnProperty("mouseenter")
+					 && (
+					 	(element.hasOwnProperty("move") && element.move)
+					 	|| !element.hasOwnProperty("move")
+					 	)
+					 ) {
+					element.listeners["mouseenter"](event, element, elements);
+	           		action = true;
+	        	}
+				element.move = true;
+	        } else if (element.hasOwnProperty("move") && element.move) {
+				if (element.listeners.hasOwnProperty("mouseleave")) {
+					element.listeners["mouseleave"](event, element, elements);
+	           		action = true;
+	        	}
+				element.move = false;
+	        }
+		}
+		if (action) {
+			draw(canvas, elements, baseWidth, baseHeight);
+		}
+	}, false);
 
 	draw(canvas, elements, baseWidth, baseHeight);
 }
@@ -83,14 +119,26 @@ function draw(canvas, elements, baseWidth, baseHeight) {
 	minHeight = (bodyH - currentHeight) / 2;
 
 	for (const[index, object] of Object.entries(elements)) {
+		var top = fromRelative(object.top, minHeight, currentHeight);
+		var left = fromRelative(object.left, minWidth, currentWidth);
+		var width = object.width * currentWidth;
+		var height = object.height * currentHeight;
 		if (object.element instanceof Image) {
-			ctx.drawImage(
-				object.element,
-				fromRelative(object.left, minWidth, currentWidth),
-				fromRelative(object.top, minHeight, currentHeight),
-				object.width * currentWidth, 
-				object.height * currentHeight
-			);
+			ctx.drawImage(object.element, left, top, width, height);
+		} else if (object.hasOwnProperty("type") && object.type === "text") {
+			ctx.font = (k * object.text.size) + "px " + object.text.font;
+			if (object.text.hasOwnProperty("color")) {
+				ctx.fillStyle = object.text.color;
+			}
+			if (object.text.hasOwnProperty("textAlign")) {
+				ctx.textAlign = object.text.textAlign;
+			}
+			ctx.fillText(object.text.value, left, top, width, height);
+		} else if (object.hasOwnProperty("type") && object.type === "rect") {
+			if (object.rect.hasOwnProperty("color")) {
+				ctx.fillStyle = object.rect.color;
+			}
+			ctx.fillRect(left, top, width, height);
 		}
 	}
 }
