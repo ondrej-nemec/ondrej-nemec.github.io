@@ -2,6 +2,8 @@
 
 V tomto tutoriálu vám pøedstavím zpùsob, jak vylepšit spuštìní java aplikací. Neprve vám ukážu jednoduchý skript, který pustí jar soubor na Windowsech i na Linuxu, popíšu, jak se dá rozšíøit, a nakonec je zaøazen generátor tohoto skriptu.
 
+[SRC download](generator.zip)
+
 **Poznámka:** skript pùvodnì vymyslel mùj kolega a èlánek vznikl s jeho laskavým svolením. Originál naleznete zde: [github.com](https://github.com/petrknap/violetumleditor/blob/master/run.bat)
 
 ## Motivace
