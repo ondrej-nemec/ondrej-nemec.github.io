@@ -2,36 +2,60 @@
 function onLoad(configPath) {
     // set copy right
     document.getElementById("date").innerText = new Date().getFullYear();
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("get", configPath, true);
-    xhr.onload = function() {
-        var response = JSON.parse(xhr.response);
+    load(configPath, function(response) {
         document.getElementById("doc-app-name").innerText = response.name;
         document.title = response.name;
         fillSelect(response.langs, "doc-language");
         fillSelect(response.versions, "doc-version");
-        fillMenu(response.doc);
 
         var params = new URLSearchParams(location.search);
-        document.getElementById('doc-language').value = params.get("lang") === null ? response.langs[0] : params.get("langs");
-        document.getElementById('doc-version').value = params.get("version") === null ? response.versions[0] : params.get("version");
-
-        var firstElement = document.querySelector("nav li[doc-href]:first-child");
-        var file = params.get("file") === null ? firstElement.getAttribute("doc-href") : params.get("file");
-        var menuItem = document.querySelector("[doc-href='" + file + "']");
-        var menuItemParent = document.getElementById(menuItem.getAttribute("parent"));
-        if (menuItemParent !== null) {
-            menuItemParent.querySelector(".doc-menu-title").click();
+        var lang = params.get("lang") === null ? response.langs[0] : params.get("langs");
+        if ( params.get("lang") === null) { // TODO fix
+            lang = response.langs[0];
+        } else {
+            lang = params.get("lang");
         }
-        menuItem.click();
-        setTimeout(function() {
-            if (location.hash.length > 1) {
-                var hash = location.hash;
-                location.hash = "#";
-                location.hash = hash;
+
+        var version = params.get("version") === null ? response.versions[0] : params.get("version");
+        document.getElementById('doc-language').value = lang;
+        document.getElementById('doc-version').value = version;
+
+        loadMenu(lang, version, function() {
+            var firstElement = getFirstMenuItem();
+            var file = params.get("file") === null ? firstElement.getAttribute("doc-href") : params.get("file");
+            var menuItem = document.querySelector("[doc-href='" + file + "']");
+            var menuItemParent = document.getElementById(menuItem.getAttribute("parent"));
+            if (menuItemParent !== null) {
+                menuItemParent.querySelector(".doc-menu-title").click();
             }
-        }, 1000);
+            menuItem.click();
+            setTimeout(function() {
+                if (location.hash.length > 1) {
+                    var hash = location.hash;
+                    location.hash = "#";
+                    location.hash = hash;
+                }
+            }, 1000);
+        });
+    });
+}
+
+function getFirstMenuItem() {
+    return document.querySelector("nav li[doc-href]:first-child");
+}
+
+function loadMenu(lang, version, after) {
+    load(lang + "/" + version + "/config.json", function(items) {
+        fillMenu(items);
+        after();
+    });
+}
+
+function load(url, onSuccess) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("get", url, true);
+    xhr.onload = function() {
+        onSuccess(JSON.parse(xhr.response));
     };
     xhr.send();
 }
@@ -39,19 +63,20 @@ function onLoad(configPath) {
 /********************************/
 
 var loadPage = function() {
-    var file = document.querySelector(".active");
-    if (file === null) {
-        console.warn("Missing active file");
-        return;
-    }
-    file = file.getAttribute("doc-href");
     var langs = document.getElementById('doc-language').value;
     var version = document.getElementById('doc-version').value;
+    loadMenu(langs, version, function() {
+        var file = document.querySelector(".active");
+        if (file === null) {
+            file = getFirstMenuItem();
+        }
+        file = file.getAttribute("doc-href");
+        document.getElementById('doc-content').innerHTML = "";
+        document.getElementById('doc-page-menu').innerHTML = "";
+        loadData(file, langs, version);
+    });
 
-
-    document.getElementById('doc-content').innerHTML = "";
-    document.getElementById('doc-page-menu').innerHTML = "";
-    loadData(file, langs, version);
+    
 };
 
 function loadData(file, lang, version) {
@@ -138,6 +163,7 @@ function fillMenu(items) {
     var mainMenuItemTemplate2 = document.getElementById("doc-template-menu-item-2");
     var subMenuItemTemplate = document.getElementById("doc-template-sub-menu-item");
     var mainMenu = document.getElementById("doc-main-menu");
+    mainMenu.innerHTML = "";
     items.forEach(function(item, index) {
         if (item.hasOwnProperty("sub")) {
             var itemContainer = cloneTemplate(mainMenuItemTemplate1);
