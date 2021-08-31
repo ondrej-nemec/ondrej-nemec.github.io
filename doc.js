@@ -14,20 +14,24 @@ function onLoad(configPath) {
         fillMenu(response.doc);
 
         var params = new URLSearchParams(location.search);
-        document.getElementById('doc-language').value = params.get("lang");
-        document.getElementById('doc-version').value = params.get("version");
+        document.getElementById('doc-language').value = params.get("lang") === null ? response.langs[0] : params.get("langs");
+        document.getElementById('doc-version').value = params.get("version") === null ? response.versions[0] : params.get("version");
 
-        var menuItem = document.querySelector("[doc-href='" + params.get("file") + "']");
+        var firstElement = document.querySelector("nav li[doc-href]:first-child");
+        var file = params.get("file") === null ? firstElement.getAttribute("doc-href") : params.get("file");
+        var menuItem = document.querySelector("[doc-href='" + file + "']");
         var menuItemParent = document.getElementById(menuItem.getAttribute("parent"));
         if (menuItemParent !== null) {
             menuItemParent.querySelector(".doc-menu-title").click();
         }
         menuItem.click();
-      /*  if (location.hash.length > 1) {
-            console.log(location.hash);
-            location.hash = "#";
-            location.hash = location.hash;
-        }*/
+        setTimeout(function() {
+            if (location.hash.length > 1) {
+                var hash = location.hash;
+                location.hash = "#";
+                location.hash = hash;
+            }
+        }, 1000);
     };
     xhr.send();
 }
