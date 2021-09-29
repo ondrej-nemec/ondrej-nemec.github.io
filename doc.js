@@ -1,4 +1,4 @@
-/* VERSION 1.0.0 */
+/* VERSION 1.0.1 */
 function onLoad(configPath) {
     // set copy right
     document.getElementById("date").innerText = new Date().getFullYear();
@@ -62,10 +62,10 @@ function load(url, onSuccess) {
 
 /********************************/
 
-var loadPage = function() {
+var loadPage = function(noMenu = false) {
     var langs = document.getElementById('doc-language').value;
     var version = document.getElementById('doc-version').value;
-    loadMenu(langs, version, function() {
+    var load = function() {
         var file = document.querySelector(".active");
         if (file === null) {
             file = getFirstMenuItem();
@@ -74,9 +74,14 @@ var loadPage = function() {
         document.getElementById('doc-content').innerHTML = "";
         document.getElementById('doc-page-menu').innerHTML = "";
         loadData(file, langs, version);
-    });
-
-    
+    };
+    if (noMenu) {
+        load();
+    } else {
+        loadMenu(langs, version, function() {
+            load();
+        })
+    };
 };
 
 function loadData(file, lang, version) {
@@ -205,7 +210,7 @@ function createSimpleMenuItem(item, index, parentIndex, parent, template) {
     container.onclick = function() {
         clearActive();
         document.getElementById(id).classList.add("active");
-        loadPage();
+        loadPage(true);
     };
     
 }
