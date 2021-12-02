@@ -1,4 +1,4 @@
-/* VERSION 1.0.1 */
+/* VERSION 1.0.2 */
 function onLoad(configPath) {
     // set copy right
     document.getElementById("date").innerText = new Date().getFullYear();
@@ -65,7 +65,7 @@ function load(url, onSuccess) {
 var loadPage = function(noMenu = false) {
     var langs = document.getElementById('doc-language').value;
     var version = document.getElementById('doc-version').value;
-    var load = function() {
+    var loading = function() {
         var file = document.querySelector(".active");
         if (file === null) {
             file = getFirstMenuItem();
@@ -76,17 +76,23 @@ var loadPage = function(noMenu = false) {
         loadData(file, langs, version);
     };
     if (noMenu) {
-        load();
+        loading();
     } else {
         loadMenu(langs, version, function() {
-            load();
+            loading();
         })
     };
 };
 
 function loadData(file, lang, version) {
     var xhr = new XMLHttpRequest();
-    xhr.open("get", lang + "/" + version + "/" + file, true);
+    var url = "";
+    if (file.startsWith('http')) {
+        url = file;
+    } else {
+        url = lang + "/" + version + "/" + file;
+    }
+    xhr.open("get", url, true);
     xhr.onload = function() {
         document.getElementById('doc-content').innerHTML = xhr.response;
         window.history.pushState({"html":window.location.href},"", "?version=" + version + "&lang=" + lang + "&file=" + file + location.hash);
