@@ -1,4 +1,4 @@
-/* VERSION 1.0.2 */
+/* VERSION 1.0.3 */
 function onLoad(configPath) {
     // set copy right
     document.getElementById("date").innerText = new Date().getFullYear();
@@ -54,6 +54,7 @@ function loadMenu(lang, version, after) {
 function load(url, onSuccess) {
     var xhr = new XMLHttpRequest();
     xhr.open("get", url, true);
+    xhr.setRequestHeader('Cache-Control', 'no-cache');
     xhr.onload = function() {
         onSuccess(JSON.parse(xhr.response));
     };
@@ -93,10 +94,12 @@ function loadData(file, lang, version) {
         url = lang + "/" + version + "/" + file;
     }
     xhr.open("get", url, true);
+    xhr.setRequestHeader('Cache-Control', 'no-cache');
     xhr.onload = function() {
         document.getElementById('doc-content').innerHTML = xhr.response;
         window.history.pushState({"html":window.location.href},"", "?version=" + version + "&lang=" + lang + "&file=" + file + location.hash);
         fillPageMenu(document.getElementById('doc-content'));
+        hljs.highlightAll();
     };
     xhr.send();
 }
