@@ -1,4 +1,5 @@
-/* VERSION 1.0.3 */
+/* VERSION 2.0.0 */
+var versions = {};
 function onLoad(configPath) {
     // set copy right
     document.getElementById("date").innerText = new Date().getFullYear();
@@ -6,7 +7,8 @@ function onLoad(configPath) {
         document.getElementById("doc-app-name").innerText = response.name;
         document.title = response.name;
         fillSelect(response.langs, "doc-language");
-        fillSelect(response.versions, "doc-version");
+        versions = response.versions;
+        fillSelect(response.versions, "doc-version", true);
 
         var params = new URLSearchParams(location.search);
         var lang = params.get("lang") === null ? response.langs[0] : params.get("langs");
@@ -16,7 +18,7 @@ function onLoad(configPath) {
             lang = params.get("lang");
         }
 
-        var version = params.get("version") === null ? response.versions[0] : params.get("version");
+        var version = params.get("version") === null ? Object.keys(versions)[0] : params.get("version");
         document.getElementById('doc-language').value = lang;
         document.getElementById('doc-version').value = version;
 
@@ -96,7 +98,7 @@ function loadData(file, lang, version) {
     xhr.open("get", url, true);
     xhr.setRequestHeader('Cache-Control', 'no-cache');
     xhr.onload = function() {
-        document.getElementById('doc-content').innerHTML = xhr.response;
+        document.getElementById('doc-content').innerHTML = xhr.response.replace(":Tag'", ":" + versions[version] + "'");
         window.history.pushState({"html":window.location.href},"", "?version=" + version + "&lang=" + lang + "&file=" + file + location.hash);
         fillPageMenu(document.getElementById('doc-content'));
         hljs.highlightAll();
@@ -224,17 +226,25 @@ function createSimpleMenuItem(item, index, parentIndex, parent, template) {
     
 }
 
-function fillSelect(options, selectId) {
+function fillSelect(options, selectId, object = false) {
     var select = document.getElementById(selectId);
     if (select === null) {
         console.error("Missing select #" + selectId);
         return;
     }
     select.onchange = loadPage;
-    options.forEach(function(optionItem) {
-       var option = document.createElement("option");
-       option.value = optionItem;
-       option.innerText = optionItem;
-       select.appendChild(option);
-    });
+    var forEach = function(optionItem) {
+        var option = document.createElement("option");
+        option.value = optionItem;
+        option.innerText = optionItem;
+        select.appendChild(option);
+    };
+    if (object) {
+        for (const[optionItem, tag] of Object.entries(options)) {
+           forEach(optionItem);
+        }
+    } else {
+        options.forEach(forEach);
+    }
+    
 }
