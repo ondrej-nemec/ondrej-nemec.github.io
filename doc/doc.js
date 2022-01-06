@@ -1,4 +1,4 @@
-/* VERSION 3.0.0 */
+/* VERSION 3.0.1 */
 var Doc = {
 	languages: {},
 	versions: {},
@@ -76,7 +76,13 @@ var Doc = {
 		setTimeout(Doc.onPageChange, 10);
 	},
 	onPageChange: function() {
-		Doc.load(Doc.getPath() + Doc.file, function(fileContent) {
+	    var url = "";
+	    if (Doc.file.startsWith('http')) {
+	        url = Doc.file;
+	    } else {
+	        url = Doc.getPath() + Doc.file;
+	    }
+		Doc.load(url, function(fileContent) {
 			var content = document.getElementById('doc-content');
 			content.innerHTML = fileContent
 				.replace(":Tag'", ":" + Doc.version + "'")
@@ -225,8 +231,6 @@ var Doc = {
 	},
 	/* minor menu */
 	fillMinorMenu: function(content) {
-		document.getElementById("doc-minor-menu-headline").innerText = content.querySelector("h1").innerText + ":";
-
 	    var containers = [];
 	    var lastLevel = -1;
 	    var getLastContainer = function() {
@@ -235,7 +239,13 @@ var Doc = {
 	    var popContainer = function() {
 	        var container = containers.pop();
 	        var last = getLastContainer();
-	        last.appendChild(container);
+	        console.log(container);
+	        if (last === undefined) {
+	        	document.getElementById("doc-minor-menu").appendChild(container);
+	        	last = pushContainer();
+	        } else {
+	        	last.appendChild(container);
+	        }
 	        return last;
 	    };
 	    var pushContainer = function() {
@@ -252,8 +262,14 @@ var Doc = {
 	        }
 	        return getLastContainer();
 	    };
-		content.querySelectorAll("h2,h3,h4").forEach(function(headline, index) {
+	    document.getElementById("doc-minor-menu-headline").innerText = "";
+		document.getElementById("doc-minor-menu").innerHTML = "";
+		content.querySelectorAll("h1,h2,h3,h4").forEach(function(headline, index) {
 			var level = parseInt(headline.tagName.substring(1,2));
+			if (level === 1) {
+				document.getElementById("doc-minor-menu-headline").innerText = headline.innerText + ":";
+				return;
+			}
 	        var id = headline.tagName + "-" + index;
 	        headline.setAttribute("id", id);
 
@@ -268,7 +284,6 @@ var Doc = {
 			li.appendChild(a);
 		});
 
-		document.getElementById("doc-minor-menu").innerHTML = "";
 	    while(containers.length > 0) {
 	        if (containers.length === 1) {
 	            document.getElementById("doc-minor-menu").appendChild(containers.pop());
