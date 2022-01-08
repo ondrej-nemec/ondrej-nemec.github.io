@@ -1,4 +1,4 @@
-/* VERSION 3.0.2 */
+/* VERSION 3.0.3 */
 var Doc = {
 	languages: {},
 	versions: {},
@@ -90,20 +90,20 @@ var Doc = {
 	},
 	onPageChange: function() {
 	    var url = "";
-	    Doc.removeMeta("og:url");
-	    Doc.removeMeta("twitter:url");
+	 //   Doc.removeMeta("og:url");
+	//    Doc.removeMeta("twitter:url");
 	    if (Doc.file.startsWith('http')) {
 	        url = Doc.file;
 	    } else {
 	        url = Doc.getPath() + Doc.file;
-			Doc.addMeta("meta", {
+			/*Doc.addMeta("meta", {
 				"property": "og:url",
 				"content": Doc.path + "?file=" + Doc.file
 			});
 			Doc.addMeta("meta", {
 				"property": "twitter:url",
 				"content": Doc.path + "?file=" + Doc.file
-			});
+			});*/
 	    }
 		Doc.load(url, function(fileContent) {
 			var content = document.getElementById('doc-content');
@@ -317,7 +317,7 @@ var Doc = {
 	/* owner ship*/
 	fillSocial: function(config) {
 		Doc.addMeta("title", {}, config.name);
-		Doc.addMeta("meta", {
+		/*Doc.addMeta("meta", {
 			"property": "og:title",
 			"content": config.name
 		});
@@ -332,7 +332,7 @@ var Doc = {
 		Doc.addMeta("meta", {
 			"property": "twitter:card",
 			"content": "summary"
-		});
+		});*/
 		if (!config.hasOwnProperty("social")) {
 			return;
 		}
@@ -368,21 +368,21 @@ var Doc = {
 				"name": "description",
 				"content": social.description
 			});
-			Doc.addMeta("meta", {
+		/*	Doc.addMeta("meta", {
 				"property": "og:description",
 				"content": social.description
 			});
 			Doc.addMeta("meta", {
 				"property": "twitter:description",
 				"content": social.description
-			});
+			});*/
 		}
 		if (social.hasOwnProperty("icon")) {
 			Doc.addMeta("link", {
 				"rel": "icon",
 				"href": social.icon
 			});
-			Doc.addMeta("meta", {
+		/*	Doc.addMeta("meta", {
 				"property": "twitter:image",
 				"content": social.icon
 			});
