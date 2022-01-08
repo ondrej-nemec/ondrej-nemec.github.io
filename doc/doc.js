@@ -1,4 +1,4 @@
-/* VERSION 3.0.1 */
+/* VERSION 3.0.2 */
 var Doc = {
 	languages: {},
 	versions: {},
@@ -58,10 +58,23 @@ var Doc = {
 		setTimeout(Doc.onSettingsChange, 10);
 	},
 	onSettingsChange: function() {
-		document.getElementById("doc-current-version").innerText = Doc.version;
-		document.getElementById("doc-current-language").innerText = Doc.lang;
+		document.getElementById("doc-current-version").innerText = Doc.versions[Doc.version];
+		document.getElementById("doc-current-language").innerText = Doc.languages[Doc.lang];
+
 		Doc.setListItemActive("doc-version", Doc.version);
 		Doc.setListItemActive("doc-language", Doc.lang);
+
+		Doc.removeMeta("docsearch:language");
+		Doc.removeMeta("docsearch:version");
+		Doc.addMeta("meta", {
+			"name": "docsearch:language",
+			"content": Doc.lang,
+		});
+		Doc.addMeta("meta", {
+			"name": "docsearch:version",
+			"content": Doc.versions[Doc.version]
+		});
+		// TODO og:locale - maybe??
 
 		Doc.load(Doc.getPath() + "config.json", function(response) {
 			config = JSON.parse(response);
@@ -77,15 +90,25 @@ var Doc = {
 	},
 	onPageChange: function() {
 	    var url = "";
+	    Doc.removeMeta("og:url");
+	    Doc.removeMeta("twitter:url");
 	    if (Doc.file.startsWith('http')) {
 	        url = Doc.file;
 	    } else {
 	        url = Doc.getPath() + Doc.file;
+			Doc.addMeta("meta", {
+				"property": "og:url",
+				"content": Doc.path + "?file=" + Doc.file
+			});
+			Doc.addMeta("meta", {
+				"property": "twitter:url",
+				"content": Doc.path + "?file=" + Doc.file
+			});
 	    }
 		Doc.load(url, function(fileContent) {
 			var content = document.getElementById('doc-content');
 			content.innerHTML = fileContent
-				.replace(":Tag'", ":" + Doc.version + "'")
+				.replace(":Tag'", ":" + Doc.versions[Doc.version] + "'")
 				.replace("<h1>", '<h1 class="bd-title">')
 				.replace('<p class="introduction">', '<p class="bd-lead">');
 
@@ -239,7 +262,6 @@ var Doc = {
 	    var popContainer = function() {
 	        var container = containers.pop();
 	        var last = getLastContainer();
-	        console.log(container);
 	        if (last === undefined) {
 	        	document.getElementById("doc-minor-menu").appendChild(container);
 	        	last = pushContainer();
@@ -295,22 +317,39 @@ var Doc = {
 	/* owner ship*/
 	fillSocial: function(config) {
 		Doc.addMeta("title", {}, config.name);
+		Doc.addMeta("meta", {
+			"property": "og:title",
+			"content": config.name
+		});
+		Doc.addMeta("meta", {
+			"property": "og:type",
+			"content": "website"
+		});
+		Doc.addMeta("meta", {
+			"property": "twitter:title",
+			"content": config.name
+		});
+		Doc.addMeta("meta", {
+			"property": "twitter:card",
+			"content": "summary"
+		});
 		if (!config.hasOwnProperty("social")) {
 			return;
 		}
+		var social = config.social;
 		var setProperty = function(propertyName, elementId, change = null) {
 			if (change === null) {
 				change = function(a){return a;};
 			}
-			if (config.social.hasOwnProperty(propertyName)) {
-				document.getElementById(elementId).innerText = change(config.social[propertyName]);
+			if (social.hasOwnProperty(propertyName)) {
+				document.getElementById(elementId).innerText = change(social[propertyName]);
 			}
 		};
 		var setLink = function(propertyName, elementId) {
-			if (config.social.hasOwnProperty(propertyName)) {
+			if (social.hasOwnProperty(propertyName)) {
 				var image = document.getElementById(elementId);
 				image.removeAttribute("style");
-				image.querySelector("a").setAttribute("href", config.social[propertyName]);
+				image.querySelector("a").setAttribute("href", social[propertyName]);
 			}
 		};
 		setProperty("author", "doc-owner");
@@ -318,26 +357,52 @@ var Doc = {
 		setLink("github", "doc-github"); //  https://github.com/...
 		setLink("collective", "doc-collective"); // https://opencollective.com/...
 
-
-		var setMeta = function(propertyName, meta, data, key) {
-			if (config.social.hasOwnProperty(propertyName)) {
-				data[key] = config.social[propertyName];
-				Doc.addMeta(meta, data);
-			}
-		};
-		setMeta("icon", "link", {
-			"rel": "icon"
-		}, "href");
-		setMeta("description", "meta", {
-			"name": "description"
-		}, "content");
-		setMeta("author", "meta", {
-			"name": "author"
-		}, "content");
-		// TODO
-		// <meta name="docsearch:language" content="en">
-		// <meta name="docsearch:version" content="5.1">
-
+		if (social.hasOwnProperty("author")) {
+			Doc.addMeta("meta", {
+				"name": "author",
+				"content": social.author
+			});
+		}
+		if (social.hasOwnProperty("description")) {
+			Doc.addMeta("meta", {
+				"name": "description",
+				"content": social.description
+			});
+			Doc.addMeta("meta", {
+				"property": "og:description",
+				"content": social.description
+			});
+			Doc.addMeta("meta", {
+				"property": "twitter:description",
+				"content": social.description
+			});
+		}
+		if (social.hasOwnProperty("icon")) {
+			Doc.addMeta("link", {
+				"rel": "icon",
+				"href": social.icon
+			});
+			Doc.addMeta("meta", {
+				"property": "twitter:image",
+				"content": social.icon
+			});
+			Doc.addMeta("meta", {
+				"property": "og:image",
+				"content": social.icon
+			});
+			Doc.addMeta("meta", {
+				"property": "og:image.type",
+				"content": "image/png"
+			});
+			/*Doc.addMeta("meta", {
+				"property": "og:image:width",
+				"content": ""
+			});
+			Doc.addMeta("meta", {
+				"property": "og:image:height",
+				"content": social.icon
+			});*/
+		}
 	},
 	fillMeta: function() {
 		Doc.addMeta("meta", {"charset": "utf-8"});
@@ -355,6 +420,12 @@ var Doc = {
 			meta.innerText = inner;
 		}
 		Doc.document.head.appendChild(meta);
+	},
+	removeMeta: function(name, tag = "meta") {
+		var meta = Doc.document.head.querySelector("meta[name='" + name + "']");
+		if (meta !== null) {
+			meta.remove();
+		}
 	}
 };
 Doc.init();
