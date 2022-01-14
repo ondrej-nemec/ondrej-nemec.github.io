@@ -52,7 +52,7 @@
         <h2 id="l1" class="featurette-heading">Lekce 1: Proměnné</h2>
         <div class="row featurette">
           <div class="col-md-6">
-            <p class="lead">V proměnné se udržuje hodnota, se kterou algoritmus pracuje. Tato hodnota je ale pro různé případy jiná - proměnná. Pro jednoduchost si proměnné představ jako krabičky do kterých se ukládají informace. Java a C# jsou tzv. typové jazyky, což znamená, že o každé proměnné musíš říci, jakého je typu. Při výuce algoritmů budeš nejčastěji používat primitivní datové typy, přičemž nejpoužívanější jsou:</p>
+            <p class="lead">V proměnné se udržuje hodnota, se kterou algoritmus pracuje. Tato hodnota je ale pro různé případy jiná - proměnná. Pro jednoduchost si proměnné představ jako krabičky do kterých se ukládají informace. Java a C# jsou tzv. typové jazyky, což znamená, že o každé proměnné musíš říci, jakého je typu. Naproti tomu PHP a JavaScript jsou netypové, tedy není potřeba uvádět datový typ. Při výuce algoritmů budeš nejčastěji používat primitivní datové typy, přičemž nejpoužívanější jsou:</p>
               <ol class="lead">
                 <li>Boolean</li>
                 <p>Nabývá hodnot 'true' a  'false'. Značí, zda něco je, či není.</p>
@@ -72,7 +72,16 @@
           </div>
           <div class="col-md-6">
             <p class="lead"> <code>
-              //inicializace promennych <br>
+              // JavaScript: var --jmeno-- = --hodnota--; <br>
+              var mojePrvniPromenna = "Hello, World"; <br>
+              // PHP: $--jmeno-- = --hodnota--; <br>
+              $mojePrvniPromenna = "Hello, World"; <br>
+              // Java: --typ-- --jmeno-- = --hodnota--;<br>
+              String mojePrvniPromenna = "Hello, World"; <br>
+              // C#: --typ-- --jmeno-- = --hodnota--;<br>
+              string mojePrvniPromenna = "Hello, World"; <br>
+              <br>
+              //inicializace typových promennych <br>
               boolean anoNe = true; <br>
               int cislo1 = 33; <br>
               float cislo2= f1.0; <br>
@@ -155,11 +164,22 @@
         <h2 id="l2" class="featurette-heading">Lekce 2: Datové struktury</h2>
         <div class="row featurette">
           <div class="col-md-6">
-            <p class="lead">Někdy je potřeba pracovat s více souvisejícími proměnnými. Lze definovat první proměnnou, druhou až třeba stou. Místo tohoto nešikovného řešení je lepší použít něco, co drží více proměnných naráz - datovou strukturu. Zde si ukážeme tzv. pole. V Javě a C# může být v poli jen jeden datový typ a má fixní velikost - od začátku má danou velikost (tebou zadanou) a tu nelze měnit. Pole obsahuje prvky. Ke každému se lze dostat zadáním pozice - indexu. POZOR: indexuje se od 0.</p>
+            <p class="lead">Někdy je potřeba pracovat s více souvisejícími proměnnými. Lze definovat první proměnnou, druhou až třeba stou. Místo tohoto nešikovného řešení je lepší použít něco, co drží více proměnných naráz - datovou strukturu. Zde si ukážeme tzv. pole. V Javě a C# může být v poli jen jeden datový typ a má fixní velikost - od začátku má danou velikost (tebou zadanou) a tu nelze měnit. PHP a JavaScript mají pole s neomezenou délkou a libovolného typu proměnných. Pole obsahuje prvky. Ke každému se lze dostat zadáním pozice - indexu. POZOR: indexuje se od 0.</p>
             <p class="lead">Vložení prvku do pole na danou pozici: 'jmenoPole[pozice] = hodnota'. Získání hodnoty na dané pozici: 'jmenoPole[pozice]'. Bývá užitečné vědět, jak je pole velké. Velikost pole získáš: 'jmenoPole.length'.</p>
           </div>
           <div class="col-md-6">
             <p class="lead"> <code>
+              // JavaScript<br>
+              var mojePole = []; // vytvoreni<br>
+              mojePole.push(hodnota); // pridani prvku<br>
+              mojePole[0]; // ziskani prvku na indexu 0<br>
+              <br>
+              // PHP<br>
+              $mojePole = []; // vytvoreni<br>
+              $mojePole[] = hodnota; // pridani prvku<br>
+              $mojePole[0]; // ziskani prvku na indexu 0<br>
+              <br>
+              // Java a C#
               // inicializace pole integeru <br>
               int[] poleIntu; <br>
               int[] jinePole = new int[5]; //pole integeru o velikosti 5 <br>
@@ -368,14 +388,24 @@
             <h3>For cyklus</h3>
             <p class="lead">Nasledující kód vypíše pod sebe čísla od 0 do 9. <br>
             Uvnitř kulatých závorek - za slovem for - se nejprve definuje proměnná, pomocí které se prochází cyklus. Nejčastěji je to integer, ale může to být libovolný typ čísla. Za středníkem je podmínka. Dokud podmínka platí, cyklus bude probíhat. Za druhým středníkem se definuje, co se má stát s proměnnou. Do složených závorek se vkládá kód, který se má provádět. <br>
-            Popis ukázky: for cyklus dosadí do proměnné promenna nulu, zkontruluje, zda je promenna menší než 10, vypíše do konzole nulu a proměnnou promenna zvětší o jedna. Tak to pokračuje, až je promenna = 10, v tu chvíli neplatí, že promenna < 10, a cyklus zkončí, aniž by vypsal do konzole desítku.</p>
+            Popis ukázky: for cyklus dosadí do proměnné promenna nulu, zkontruluje, zda je promenna menší než 10, vypíše do konzole nulu a proměnnou promenna zvětší o jedna. Tak to pokračuje, až je promenna = 10, v tu chvíli neplatí, že promenna &lt; 10, a cyklus zkončí, aniž by vypsal do konzole desítku.</p>
           </div>
           <div class="col-md-6">
             <p class="lead"><code>
-              // for <br>
-            for (int promenna = 0; promenna < 10; promenna = promenna+1) { <br>
-            &emsp;&emsp;System.out.println(promenna); // vypis v Javě, v C# je jine <br>
-            }</code></p>
+              // JavaScript <br>
+              for (var promenna = 0; promenna &lt; 10; promenna = promenna+1) { <br>
+              &emsp;&emsp;console.log(promenna); // vypis<br>
+              } <br><br>
+              // PHP<br>
+              for ($promenna = 0; $promenna &lt; 10; $promenna = $promenna+1) { <br>
+              &emsp;&emsp;echo $promenna; // vypis<br>
+              }<br><br>
+              // Java a C#<br>
+              for (int promenna = 0; promenna &lt; 10; promenna = promenna+1) { <br>
+              &emsp;&emsp;System.out.println(promenna); // vypis v Javě<br>
+              &emsp;&emsp;Console.Write(promenna); // vypis v C#<br>
+              }
+            </code></p>
           </div>
           <!-- -->
           <div class="col-md-6">
@@ -384,12 +414,26 @@
           </div>
           <div class="col-md-6">
             <p class="lead"> <code>
-            // while <br>            
-            int promenna = 0;
-            while (promenna < 10) {  <br>
-            &emsp;&emsp;System.out.println(promenna); <br>
-            &emsp;&emsp;promenna++; <br>
-            }</code></p>
+              // JavaScript <br>            
+              var promenna = 0; <br>
+              while (promenna &lt; 10) {  <br>
+              &emsp;&emsp;console.log(promenna); <br>
+              &emsp;&emsp;promenna++; <br>
+              }<br><br>
+              // PHP <br>            
+              $promenna = 0; <br>
+              while ($promenna &lt; 10) {  <br>
+              &emsp;&emsp;echo $promenna; <br>
+              &emsp;&emsp;$promenna++; <br>
+              }<br><br>
+              // Java a C# <br>            
+              int promenna = 0; <br>
+              while (promenna &lt; 10) {  <br>
+              &emsp;&emsp;System.out.println(promenna); <br>
+              &emsp;&emsp;Console.log(promenna); <br>
+              &emsp;&emsp;promenna++; <br>
+              }<br>
+            </code></p>
           </div>
           <!-- -->
           <div class="col-md-6">
@@ -398,11 +442,34 @@
           </div>
           <div class="col-md-6">
             <p class="lead"> <code>
-            // for each <br>
-            String[] pole = new String[] {"aa", "bb", "cc"}; <br>
-            for (String polozka : pole) { <br>
-            &emsp;&emsp;System.out.println(polozka);<br>
-            }</code></p>
+              // JavaScript <br>
+              var pole = ["aa", "bb", "cc"]; <br>
+              // prvni moznost
+              for (const polozka of pole) { <br>
+              &emsp;&emsp;console.log(polozka);<br>
+              }<br>
+              // druha moznost<br>
+              pole.forEach(function(polozka, index) {<br>
+              &emps;&emps;console.log(polozka);<br>
+              });<br>
+              <br>
+              // PHP <br>
+              $pole = ["aa", "bb", "cc"]; <br>
+              // prvni zpusob <br>
+              foreach ($pole as $polozka) { <br>
+              &emsp;&emsp;echo $polozka;<br>
+              }<br>
+              // druhy zpusob <br>
+              foreach ($pole as $index =&gt; $polozka) { <br>
+              &emsp;&emsp;echo $polozka;<br>
+              }<br>
+              <br>
+              // Java a C# <br>
+              String[] pole = new String[] {"aa", "bb", "cc"}; <br>
+              for (String polozka : pole) { <br>
+              &emsp;&emsp;System.out.println(polozka);<br>
+              }<br>
+            </code></p>
           </div>
 
            <div>
