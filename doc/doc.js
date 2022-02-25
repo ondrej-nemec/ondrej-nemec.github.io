@@ -1,4 +1,4 @@
-/* VERSION 3.0.3 */
+/* VERSION 3.0.4 */
 var Doc = {
 	languages: {},
 	versions: {},
@@ -304,6 +304,19 @@ var Doc = {
 			a.setAttribute("href", "#" + id);
 			a.innerText = headline.innerText;
 			li.appendChild(a);
+		});
+		content.querySelectorAll("a").forEach(function(a) {
+			a.onclick = function() {
+				if (a.getAttribute("href").startsWith("http")) {
+					window.parent.location = a.getAttribute("href");
+					return false;
+				}
+				if (a.getAttribute("href").startsWith("?file")) {
+					Doc.setFile(a.getAttribute("href").substring(6));
+					return false;
+				}
+				return true;
+			};
 		});
 
 	    while(containers.length > 0) {
