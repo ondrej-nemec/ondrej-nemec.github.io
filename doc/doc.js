@@ -1,4 +1,4 @@
-/* VERSION 3.0.4 */
+/* VERSION 4.0.0 */
 var Doc = {
 	languages: {},
 	versions: {},
@@ -21,7 +21,7 @@ var Doc = {
 	path: "",
 	document: window.parent.document,
 	getPath: function() {
-		return Doc.path + "/" + Doc.lang + "/" + Doc.version + "/";
+		return Doc.path + "/" + Doc.lang + "/"; // + Doc.version + "/";
 	},
 	init: function() {
 		document.getElementById("date").innerText = new Date().getFullYear();
@@ -39,8 +39,8 @@ var Doc = {
 	        Doc.versions = config.versions;
 	        Doc.languages = config.langs;
 			var params = new URLSearchParams(Doc.location.search);
-        	Doc.lang = params.get("lang") === null ? Object.keys(Doc.languages)[0] : params.get("lang"),
-        	Doc.version = params.get("version") === null ? Object.keys(Doc.versions)[0] : params.get("version"),
+        	Doc.lang = params.get("lang") === null ? Object.keys(Doc.languages)[0] : params.get("lang");
+        	Doc.version = params.get("version") === null ? Object.keys(Doc.versions)[0] : params.get("version");
         	Doc.file = params.get("file"); // === null ? null : params.get("file")
         	// fill static content
         	document.getElementById("doc-app-name").innerText = config.name;
@@ -75,12 +75,14 @@ var Doc = {
 			"content": Doc.versions[Doc.version]
 		});
 		// TODO og:locale - maybe??
-
-		Doc.load(Doc.getPath() + "config.json", function(response) {
-			config = JSON.parse(response);
-			Doc.fillMainMenu(config);
+		Doc.load(Doc.getPath() + "index.html", function(response) {
+			var wrapper = document.createElement("div");
+			wrapper.innerHTML = response;
+			Doc.prepareHtml(wrapper, ".menu");
+			var menuItems = wrapper.querySelectorAll('.menu');
+			Doc.fillMainMenu(menuItems);
 			if (Doc.file === null) {
-				Doc.file = config[0].link;
+				Doc.file = wrapper.querySelector(".menu .main.link").innerText;
 			}
 			Doc.onPageChange();
 		}, Doc.onLoadFailure());
@@ -106,12 +108,13 @@ var Doc = {
 			});*/
 	    }
 		Doc.load(url, function(fileContent) {
+			// TODO check file for version?
 			var content = document.getElementById('doc-content');
 			content.innerHTML = fileContent
 				.replace(":Tag'", ":" + Doc.versions[Doc.version] + "'")
 				.replace("<h1>", '<h1 class="bd-title">')
 				.replace('<p class="introduction">', '<p class="bd-lead">');
-
+			Doc.prepareHtml(content, ".diff");
 			window.parent.history.pushState(
 				{"html":window.location.href},"", 
 				"?version=" + Doc.version + "&lang=" + Doc.lang + "&file=" + Doc.file + location.hash);
@@ -185,15 +188,16 @@ var Doc = {
 	fillMainMenu: function(menuItems) {
 		var menu = document.getElementById("doc-main-menu");
 		menu.innerHTML = "";
-		for (const[index, item] of Object.entries(menuItems)) {
+		menuItems.forEach(function(item, index) {
 			var li = document.createElement("li");
 			li.classList.add("mb-1");
 			menu.appendChild(li);
 
-			if (item.hasOwnProperty("sub")) {
+			var title = item.querySelector('.title').innerText;
+			if (item.querySelector('.main.link') === null) {
 				var button = document.createElement("button");
 				button.setAttribute("class", "btn d-inline-flex align-items-center rounded collapsed");
-				button.innerText = item.title;
+				button.innerText = title;
 				li.appendChild(button);
 				var collapseId = "collapse_" + index;
 				button.setAttribute("data-bs-toggle", "collapse");
@@ -207,7 +211,8 @@ var Doc = {
 				var ul = document.createElement("ul");
 				ul.setAttribute("class", "list-unstyled fw-normal pb-1 small");
 				div.appendChild(ul);
-				Doc.fillMainSubMenu(ul, item.sub);
+				Doc.prepareHtml(item, '.submenu');
+				Doc.fillMainSubMenu(ul, item.querySelectorAll(".submenu"));
 
 				var expanded = div.querySelector("li a.active") !== null;
 				button.setAttribute("aria-expanded", expanded);
@@ -220,26 +225,28 @@ var Doc = {
 				a.classList.add("doc-menu-notCollapsed");
 				li.appendChild(a);
 			}
-		}
+		});
 	},
 	fillMainSubMenu: function(submenu, items) {
-		for (const[index, item] of Object.entries(items)) {
+		items.forEach(function(item) {
 			var li = document.createElement("li");
 			submenu.appendChild(li);
 			li.appendChild(Doc.createMainMenuLink(item));
-		}
+		});
 	},
 	createMainMenuLink: function(item) {
 		var a = document.createElement("a");
-		a.setAttribute("href", item.link);
+		var title = item.querySelector('.title').innerText;
+		var link = item.querySelector('.link').innerText;
+		a.setAttribute("href", link);
 		a.setAttribute("class", "d-inline-flex align-items-center rounded");
-		if (Doc.file === item.link) {
+		if (Doc.file === link) {
 			Doc.setFileLinkActive(a);
 		}
-		a.innerText = item.title;
+		a.innerText = title;
 		a.onclick = function() {
 			Doc.setFileLinkActive(a);
-			Doc.setFile(item.link);
+			Doc.setFile(link);
 			return false;
 		};
 		return a;
@@ -326,6 +333,30 @@ var Doc = {
 	            popContainer();
 	        }
 	    }
+	},
+	/* preparation */
+	prepareHtml: function(content, selector) {
+		var versions = {};
+		Object.keys(Doc.versions).sort().forEach(function(ver, index) {
+			versions[ver] = index;
+		});
+		var currentVersionIndex = versions[Doc.version];
+		content.querySelectorAll(selector).forEach(function(el) {
+			var from = el.getAttribute("from");
+			var to = el.getAttribute("to");
+			if (from !== null && versions.hasOwnProperty(from)) {
+				if (currentVersionIndex < versions[from]) {
+					el.remove();
+					return;
+				}
+			}
+			if (to !== null && versions.hasOwnProperty(to)) {
+				if (currentVersionIndex > versions[to]) {
+					el.remove();
+					return;
+				}
+			}
+		});
 	},
 	/* owner ship*/
 	fillSocial: function(config) {
