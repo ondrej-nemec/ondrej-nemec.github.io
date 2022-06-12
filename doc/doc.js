@@ -1,4 +1,4 @@
-/* VERSION 4.0.0 */
+/* VERSION 4.0.1 */
 var Doc = {
 	languages: {},
 	versions: {},
@@ -46,8 +46,8 @@ var Doc = {
         	document.getElementById("doc-app-name").innerText = config.name;
 	        Doc.fillList(config.langs, "doc-language", "lang", function(newLang) {
 	        	Doc.setLang(newLang);
-	        });
-	        Doc.fillList(config.versions, "doc-version", "version", function(newVer){
+	        }); 
+	        Doc.fillList(Object.keys(config.versions).reduce((acc,curr)=>(acc[curr]=curr,acc),{}), "doc-version", "version", function(newVer){
 	        	Doc.setVersion(newVer);
 	        });
 	        // load first page
@@ -58,7 +58,7 @@ var Doc = {
 		setTimeout(Doc.onSettingsChange, 10);
 	},
 	onSettingsChange: function() {
-		document.getElementById("doc-current-version").innerText = Doc.versions[Doc.version];
+		document.getElementById("doc-current-version").innerText = Doc.version;
 		document.getElementById("doc-current-language").innerText = Doc.languages[Doc.lang];
 
 		Doc.setListItemActive("doc-version", Doc.version);
