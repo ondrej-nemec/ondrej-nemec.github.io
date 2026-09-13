@@ -1,0 +1,92 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti.TOTI.lib",
+    "module": "toti-templating",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-templating-1.0.jar",
+          "url": "toti-templating-1.0.jar",
+          "size": 71371,
+          "sha512": "77400df8a60e910a01156e23718ce52a200c070785ee49570fe7286a4a80bfc7e51f78b763c490ebf17b9aed9d2b1a62fd64ad2f0479761212e5be0a141a25ad",
+          "sha256": "9343dc7a2683eb4aea8ae67e097da9ef9036f39ddb75bedcbffe25f32f45705c",
+          "sha1": "dc638582b568e2bd8e8c139fd067fddd0eb554fb",
+          "md5": "1d03ea511d3d1c130588c9b6f6117444"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-templating-1.0.jar",
+          "url": "toti-templating-1.0.jar",
+          "size": 71371,
+          "sha512": "77400df8a60e910a01156e23718ce52a200c070785ee49570fe7286a4a80bfc7e51f78b763c490ebf17b9aed9d2b1a62fd64ad2f0479761212e5be0a141a25ad",
+          "sha256": "9343dc7a2683eb4aea8ae67e097da9ef9036f39ddb75bedcbffe25f32f45705c",
+          "sha1": "dc638582b568e2bd8e8c139fd067fddd0eb554fb",
+          "md5": "1d03ea511d3d1c130588c9b6f6117444"
+        }
+      ]
+    }
+  ]
+}

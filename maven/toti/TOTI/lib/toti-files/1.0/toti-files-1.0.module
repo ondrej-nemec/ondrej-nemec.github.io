@@ -1,0 +1,78 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti.TOTI.lib",
+    "module": "toti-files",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-files-1.0.jar",
+          "url": "toti-files-1.0.jar",
+          "size": 58106,
+          "sha512": "468f78afca40344c8680d83902101192f9e4beb4787808ee2ae1f5f1e6aca7f53980390a88e30bf24758af0521c9c6994a5b4ac20ddc9378832420b23ffedf98",
+          "sha256": "d8f21ead51bfd88f47e24ba65f6fa07267996e8f89056607eb061e5565c50e84",
+          "sha1": "64dd16b4e38922d854733e22060876791a31f700",
+          "md5": "bd2c26fa4302249d8c05ceff3184f362"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-files-1.0.jar",
+          "url": "toti-files-1.0.jar",
+          "size": 58106,
+          "sha512": "468f78afca40344c8680d83902101192f9e4beb4787808ee2ae1f5f1e6aca7f53980390a88e30bf24758af0521c9c6994a5b4ac20ddc9378832420b23ffedf98",
+          "sha256": "d8f21ead51bfd88f47e24ba65f6fa07267996e8f89056607eb061e5565c50e84",
+          "sha1": "64dd16b4e38922d854733e22060876791a31f700",
+          "md5": "bd2c26fa4302249d8c05ceff3184f362"
+        }
+      ]
+    }
+  ]
+}

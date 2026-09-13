@@ -1,0 +1,232 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti",
+    "module": "TOTI",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-translate",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-tcpip",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-templating",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-database",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-validation",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-templating",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-translator",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-ui",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "TOTI-1.0.jar",
+          "url": "TOTI-1.0.jar",
+          "size": 261,
+          "sha512": "f05eecc5a297e2cd513bcc0af67938adae4b38016c60b2b5e0b6788f0c7bb70a1055c8d40fa8b7da83d03f8ee892fe8130da0af56f280a281f0fc07e7d0d6e38",
+          "sha256": "c8ed24513b9c9ddfb12c3fe521894f0c1844871c8a4ea58ac3f0541a2aefbbcb",
+          "sha1": "d3bce8aaa99cf36a3076321105b70b36d0613592",
+          "md5": "88d16ec3edf2924dd4faec4e830c3bde"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-translate",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-tcpip",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-templating",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-database",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-validation",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-templating",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-translator",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.extension",
+          "module": "te-ui",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "TOTI-1.0.jar",
+          "url": "TOTI-1.0.jar",
+          "size": 261,
+          "sha512": "f05eecc5a297e2cd513bcc0af67938adae4b38016c60b2b5e0b6788f0c7bb70a1055c8d40fa8b7da83d03f8ee892fe8130da0af56f280a281f0fc07e7d0d6e38",
+          "sha256": "c8ed24513b9c9ddfb12c3fe521894f0c1844871c8a4ea58ac3f0541a2aefbbcb",
+          "sha1": "d3bce8aaa99cf36a3076321105b70b36d0613592",
+          "md5": "88d16ec3edf2924dd4faec4e830c3bde"
+        }
+      ]
+    }
+  ]
+}

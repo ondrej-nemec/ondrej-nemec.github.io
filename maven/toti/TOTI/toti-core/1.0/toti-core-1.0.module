@@ -1,0 +1,155 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti.TOTI",
+    "module": "toti-core",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-tcpip",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-core-1.0.jar",
+          "url": "toti-core-1.0.jar",
+          "size": 132684,
+          "sha512": "3ff33d1cdf0e7ed9690dc5904948cc357227ba4944daa0c05ebdbde80643db46a875900a8df0926c996579a9ec4d44332650dca690cd314a3b2cda53f736f2c2",
+          "sha256": "c9e4a23a72f8e5dc745300666ef2cfd3920525ad9362f064c7f810cce1b2bfb5",
+          "sha1": "2843d98ef60dd39c34d6bdddbcbebae51d845cbf",
+          "md5": "60d8d0c429f13fce4bdb7013d98aeaa8"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.objenesis",
+          "module": "objenesis",
+          "version": {
+            "requires": "2.4"
+          }
+        },
+        {
+          "group": "net.bytebuddy",
+          "module": "byte-buddy",
+          "version": {
+            "requires": "1.8.13"
+          }
+        },
+        {
+          "group": "net.bytebuddy",
+          "module": "byte-buddy-agent",
+          "version": {
+            "requires": "1.8.1"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty",
+          "module": "jetty-server",
+          "version": {
+            "requires": "12.0.11"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty.http2",
+          "module": "jetty-http2-server",
+          "version": {
+            "requires": "12.0.11"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty",
+          "module": "jetty-alpn-server",
+          "version": {
+            "requires": "12.0.11"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty",
+          "module": "jetty-alpn-java-server",
+          "version": {
+            "requires": "12.0.11"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty.websocket",
+          "module": "jetty-websocket-jetty-api",
+          "version": {
+            "requires": "12.0.11"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty.websocket",
+          "module": "jetty-websocket-jetty-server",
+          "version": {
+            "requires": "12.0.11"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-tcpip",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-core-1.0.jar",
+          "url": "toti-core-1.0.jar",
+          "size": 132684,
+          "sha512": "3ff33d1cdf0e7ed9690dc5904948cc357227ba4944daa0c05ebdbde80643db46a875900a8df0926c996579a9ec4d44332650dca690cd314a3b2cda53f736f2c2",
+          "sha256": "c9e4a23a72f8e5dc745300666ef2cfd3920525ad9362f064c7f810cce1b2bfb5",
+          "sha1": "2843d98ef60dd39c34d6bdddbcbebae51d845cbf",
+          "md5": "60d8d0c429f13fce4bdb7013d98aeaa8"
+        }
+      ]
+    }
+  ]
+}

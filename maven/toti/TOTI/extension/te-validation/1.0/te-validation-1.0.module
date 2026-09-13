@@ -1,0 +1,78 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti.TOTI.extension",
+    "module": "te-validation",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-validation-1.0.jar",
+          "url": "te-validation-1.0.jar",
+          "size": 48032,
+          "sha512": "213a9eeb237ba2a15c19d0000855217c9ccb7bc01b2d81a590b1e7f594d08c72e202be1bac5ddf986267c93cd2a1d367a04e991476e40d1ca63819672d15a9a1",
+          "sha256": "17170da50750a78af33e4ebd8b7956e1240880f4151d62a428647dd7ef33c81f",
+          "sha1": "f2a5f5353270716ca380e921744c970c724757af",
+          "md5": "c95b4982cf1d276fc2fc68968c63d91c"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-validation-1.0.jar",
+          "url": "te-validation-1.0.jar",
+          "size": 48032,
+          "sha512": "213a9eeb237ba2a15c19d0000855217c9ccb7bc01b2d81a590b1e7f594d08c72e202be1bac5ddf986267c93cd2a1d367a04e991476e40d1ca63819672d15a9a1",
+          "sha256": "17170da50750a78af33e4ebd8b7956e1240880f4151d62a428647dd7ef33c81f",
+          "sha1": "f2a5f5353270716ca380e921744c970c724757af",
+          "md5": "c95b4982cf1d276fc2fc68968c63d91c"
+        }
+      ]
+    }
+  ]
+}

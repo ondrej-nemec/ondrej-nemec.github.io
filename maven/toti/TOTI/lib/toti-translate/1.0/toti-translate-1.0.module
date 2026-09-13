@@ -1,0 +1,92 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti.TOTI.lib",
+    "module": "toti-translate",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-translate-1.0.jar",
+          "url": "toti-translate-1.0.jar",
+          "size": 6413,
+          "sha512": "f4dbd35d79ad65b34db83079fe8aa2b9871fc8abd3ed20d1d4bf521ab07405eacbe2e187d5ca7a47186440c2a791533af93a6190e77ca08ecec4d3aeea31c9ab",
+          "sha256": "17cf85f2db332a449effc643f428d737a9e1e04bfb2dcbf0a1777f559985a472",
+          "sha1": "4d5048cf835ae4471511b59a7302255f4d57f849",
+          "md5": "b35b9dab9be8364a057ae1f537bf18ee"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-translate-1.0.jar",
+          "url": "toti-translate-1.0.jar",
+          "size": 6413,
+          "sha512": "f4dbd35d79ad65b34db83079fe8aa2b9871fc8abd3ed20d1d4bf521ab07405eacbe2e187d5ca7a47186440c2a791533af93a6190e77ca08ecec4d3aeea31c9ab",
+          "sha256": "17cf85f2db332a449effc643f428d737a9e1e04bfb2dcbf0a1777f559985a472",
+          "sha1": "4d5048cf835ae4471511b59a7302255f4d57f849",
+          "md5": "b35b9dab9be8364a057ae1f537bf18ee"
+        }
+      ]
+    }
+  ]
+}

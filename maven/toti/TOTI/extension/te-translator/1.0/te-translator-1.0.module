@@ -1,0 +1,92 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti.TOTI.extension",
+    "module": "te-translator",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-translate",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-translator-1.0.jar",
+          "url": "te-translator-1.0.jar",
+          "size": 3779,
+          "sha512": "f0ff7a66df8ba6b0a896259c4ce87010dcf0280e9987e8bb25018a42ac15daa430f1d3412b9a023fc26ee268ac5209f2aa658ce666f62115251ec7cbb5178b4e",
+          "sha256": "e1e92d450da3df4e40b5c722492ea6c72af6cf4e73b9bb47b324d218b5af9ac2",
+          "sha1": "3a5110367ca0c32a64e72a9e800c3fa6ddbc4643",
+          "md5": "38c7744c112da96cda591919cb274729"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-translate",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-translator-1.0.jar",
+          "url": "te-translator-1.0.jar",
+          "size": 3779,
+          "sha512": "f0ff7a66df8ba6b0a896259c4ce87010dcf0280e9987e8bb25018a42ac15daa430f1d3412b9a023fc26ee268ac5209f2aa658ce666f62115251ec7cbb5178b4e",
+          "sha256": "e1e92d450da3df4e40b5c722492ea6c72af6cf4e73b9bb47b324d218b5af9ac2",
+          "sha1": "3a5110367ca0c32a64e72a9e800c3fa6ddbc4643",
+          "md5": "38c7744c112da96cda591919cb274729"
+        }
+      ]
+    }
+  ]
+}

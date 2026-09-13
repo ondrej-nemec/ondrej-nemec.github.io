@@ -1,0 +1,92 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "toti.TOTI.extension",
+    "module": "te-database",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-database-1.0.jar",
+          "url": "te-database-1.0.jar",
+          "size": 2915,
+          "sha512": "674063370b5087da4301315f72d8445940e0eff8e8c2c55c6ad74a87f4b904a11384517a596b964695764353ec6bd186205dc870881e11374b56846365301c13",
+          "sha256": "d8608eb3de6054a957961384e6eec45d2130d456ebbfdd3e5ec4c526993ca393",
+          "sha1": "cbc5e125bd1b2c19f467191e2b2aabf163cf3e22",
+          "md5": "c88016e0b01f6fd1513ec193a72f22a1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "toti.TOTI",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "toti.TOTI.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-database-1.0.jar",
+          "url": "te-database-1.0.jar",
+          "size": 2915,
+          "sha512": "674063370b5087da4301315f72d8445940e0eff8e8c2c55c6ad74a87f4b904a11384517a596b964695764353ec6bd186205dc870881e11374b56846365301c13",
+          "sha256": "d8608eb3de6054a957961384e6eec45d2130d456ebbfdd3e5ec4c526993ca393",
+          "sha1": "cbc5e125bd1b2c19f467191e2b2aabf163cf3e22",
+          "md5": "c88016e0b01f6fd1513ec193a72f22a1"
+        }
+      ]
+    }
+  ]
+}
