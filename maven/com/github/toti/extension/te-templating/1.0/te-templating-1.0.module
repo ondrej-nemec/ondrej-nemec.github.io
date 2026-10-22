@@ -1,0 +1,92 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.extension",
+    "module": "te-templating",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-templating",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-templating-1.0.jar",
+          "url": "te-templating-1.0.jar",
+          "size": 17360,
+          "sha512": "7c147e7e03c14ca50a31d8ebc3d3fa74da98e448d96b21200616cfd461417d2e206696a605282974fe31694ea9ccd583087b6d1cc24dfcbfc4a8051d64ae7f84",
+          "sha256": "490d728595df1bf938cf63e660d7fc99027c5985cc48e505bb7bc1cbca414e17",
+          "sha1": "4768321d84fca8a2bde732bebf9d974b57be7eed",
+          "md5": "e9853b281b1c89bc8ca67c0685d98a95"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-templating",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-templating-1.0.jar",
+          "url": "te-templating-1.0.jar",
+          "size": 17360,
+          "sha512": "7c147e7e03c14ca50a31d8ebc3d3fa74da98e448d96b21200616cfd461417d2e206696a605282974fe31694ea9ccd583087b6d1cc24dfcbfc4a8051d64ae7f84",
+          "sha256": "490d728595df1bf938cf63e660d7fc99027c5985cc48e505bb7bc1cbca414e17",
+          "sha1": "4768321d84fca8a2bde732bebf9d974b57be7eed",
+          "md5": "e9853b281b1c89bc8ca67c0685d98a95"
+        }
+      ]
+    }
+  ]
+}

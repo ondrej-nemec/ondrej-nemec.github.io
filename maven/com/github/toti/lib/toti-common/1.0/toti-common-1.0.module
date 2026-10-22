@@ -1,0 +1,201 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.lib",
+    "module": "toti-common",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.logging.log4j",
+          "module": "log4j-api",
+          "version": {
+            "requires": "2.26.1"
+          }
+        },
+        {
+          "group": "org.apache.commons",
+          "module": "commons-lang3",
+          "version": {
+            "requires": "3.20.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-common-1.0.jar",
+          "url": "toti-common-1.0.jar",
+          "size": 69119,
+          "sha512": "2185bc4f5e56c4efa6b26910f48a037b079cce14cd889057c7ac123b90917ced6b8d3b538e30521c7916ae50e3038d3b2fdf3298467e2e9539fe4ba2b19bbdc1",
+          "sha256": "a8c494e734af4352d591385a3c82efac6b161b6460a29df1dafd6e1ebbda9c09",
+          "sha1": "68a83e940d47ef3377de32afc71be95f0c3bcad4",
+          "md5": "67d80fd01922cc89f1e288ea898f0b39"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.logging.log4j",
+          "module": "log4j-api",
+          "version": {
+            "requires": "2.26.1"
+          }
+        },
+        {
+          "group": "org.apache.commons",
+          "module": "commons-lang3",
+          "version": {
+            "requires": "3.20.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-common-1.0.jar",
+          "url": "toti-common-1.0.jar",
+          "size": 69119,
+          "sha512": "2185bc4f5e56c4efa6b26910f48a037b079cce14cd889057c7ac123b90917ced6b8d3b538e30521c7916ae50e3038d3b2fdf3298467e2e9539fe4ba2b19bbdc1",
+          "sha256": "a8c494e734af4352d591385a3c82efac6b161b6460a29df1dafd6e1ebbda9c09",
+          "sha1": "68a83e940d47ef3377de32afc71be95f0c3bcad4",
+          "md5": "67d80fd01922cc89f1e288ea898f0b39"
+        }
+      ]
+    },
+    {
+      "name": "testFixturesApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-common-1.0-test-fixtures.jar",
+          "url": "toti-common-1.0-test-fixtures.jar",
+          "size": 13928,
+          "sha512": "3d8c18242e9047459fcbe14a3e0dc1c6b15fb0c1a05aee7d5bc98e4948d2a46d10e1c79fb16238e6b1dad5038b916083e9a031028d100206f574975db0ce0b26",
+          "sha256": "e1c99d5b8d3ae2cd0beb4910595bfdaf3c1abf0907fad3112f2e8adc02282a3b",
+          "sha1": "7a96e42ab72788ca4bf9a973814a1cd73ac9830c",
+          "md5": "eac40cc1ba6abd45809498b051edc304"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.toti.lib",
+          "name": "toti-common-test-fixtures",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "name": "testFixturesRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.mockito",
+          "module": "mockito-core",
+          "version": {
+            "requires": "5.24.0"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "6.1.3"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-params",
+          "version": {
+            "requires": "6.1.3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-engine",
+          "version": {
+            "requires": "6.1.3"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-launcher",
+          "version": {
+            "requires": "6.1.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-common-1.0-test-fixtures.jar",
+          "url": "toti-common-1.0-test-fixtures.jar",
+          "size": 13928,
+          "sha512": "3d8c18242e9047459fcbe14a3e0dc1c6b15fb0c1a05aee7d5bc98e4948d2a46d10e1c79fb16238e6b1dad5038b916083e9a031028d100206f574975db0ce0b26",
+          "sha256": "e1c99d5b8d3ae2cd0beb4910595bfdaf3c1abf0907fad3112f2e8adc02282a3b",
+          "sha1": "7a96e42ab72788ca4bf9a973814a1cd73ac9830c",
+          "md5": "eac40cc1ba6abd45809498b051edc304"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.toti.lib",
+          "name": "toti-common-test-fixtures",
+          "version": "1.0"
+        }
+      ]
+    }
+  ]
+}

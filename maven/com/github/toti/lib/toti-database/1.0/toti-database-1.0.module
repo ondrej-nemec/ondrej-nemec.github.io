@@ -1,0 +1,208 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.lib",
+    "module": "toti-database",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-database-1.0.jar",
+          "url": "toti-database-1.0.jar",
+          "size": 209237,
+          "sha512": "5ceea1f911eb8a756ea08827016e2a554514cce818b9f835b5e780e36e4acb2245f88aac41fcf262f0c9347a99389614283dbca8d10c9a394d2db0350990cce2",
+          "sha256": "63b7d2e7e230c6fa5f295c50c3a5a3d0ce948146d72d1e199d99399d7eb572c5",
+          "sha1": "9bc40479c05c14b4b4328ee098b5ac2b2bb46076",
+          "md5": "41d1fc6a20c94ba59f9dd0ca5f606444"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.mysql",
+          "module": "mysql-connector-j",
+          "version": {
+            "requires": "26.7.0"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-database-1.0.jar",
+          "url": "toti-database-1.0.jar",
+          "size": 209237,
+          "sha512": "5ceea1f911eb8a756ea08827016e2a554514cce818b9f835b5e780e36e4acb2245f88aac41fcf262f0c9347a99389614283dbca8d10c9a394d2db0350990cce2",
+          "sha256": "63b7d2e7e230c6fa5f295c50c3a5a3d0ce948146d72d1e199d99399d7eb572c5",
+          "sha1": "9bc40479c05c14b4b4328ee098b5ac2b2bb46076",
+          "md5": "41d1fc6a20c94ba59f9dd0ca5f606444"
+        }
+      ]
+    },
+    {
+      "name": "testFixturesApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-database-1.0-test-fixtures.jar",
+          "url": "toti-database-1.0-test-fixtures.jar",
+          "size": 7920,
+          "sha512": "d739959e034dcd1b13122dd9d928b6f7ca766948a3195d0ceb935a380817b88ae24e33246cfdfc56df7ac7fc108ff5e07e2e3fc6bc7f294bc367564ad7e32123",
+          "sha256": "7e818c684900b4a39194e78a645522249a35a07a921539ecb7f6cd6e74ac2639",
+          "sha1": "7ec1353cbbae5cdf305e2384100b5793b64f86ab",
+          "md5": "0e188e55b68ca77eea97e15f99350cc6"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.toti.lib",
+          "name": "toti-database-test-fixtures",
+          "version": "1.0"
+        }
+      ]
+    },
+    {
+      "name": "testFixturesRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.mockito",
+          "module": "mockito-core",
+          "version": {
+            "requires": "5.24.0"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "6.1.3"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-params",
+          "version": {
+            "requires": "6.1.3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-engine",
+          "version": {
+            "requires": "6.1.3"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-launcher",
+          "version": {
+            "requires": "6.1.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-database-1.0-test-fixtures.jar",
+          "url": "toti-database-1.0-test-fixtures.jar",
+          "size": 7920,
+          "sha512": "d739959e034dcd1b13122dd9d928b6f7ca766948a3195d0ceb935a380817b88ae24e33246cfdfc56df7ac7fc108ff5e07e2e3fc6bc7f294bc367564ad7e32123",
+          "sha256": "7e818c684900b4a39194e78a645522249a35a07a921539ecb7f6cd6e74ac2639",
+          "sha1": "7ec1353cbbae5cdf305e2384100b5793b64f86ab",
+          "md5": "0e188e55b68ca77eea97e15f99350cc6"
+        }
+      ],
+      "capabilities": [
+        {
+          "group": "com.github.toti.lib",
+          "name": "toti-database-test-fixtures",
+          "version": "1.0"
+        }
+      ]
+    }
+  ]
+}
