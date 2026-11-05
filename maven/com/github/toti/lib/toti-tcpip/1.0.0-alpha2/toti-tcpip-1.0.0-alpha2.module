@@ -1,0 +1,106 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.lib",
+    "module": "toti-tcpip",
+    "version": "1.0.0-alpha2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha2"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0.0-alpha2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha2.jar",
+          "url": "toti-tcpip-1.0.0-alpha2.jar",
+          "size": 54366,
+          "sha512": "b568566cd2d4777a63a5af72ce343750cfd3d9f39976c6114b2cd0cee8676f49e4de3ac842e0eef92828e49a8184ad609a1967d3d983958ae64a6f095480db5d",
+          "sha256": "a70221b53e26f54f4d9fa1ed1abbbadc03b816d54587e76bd1ee319eb224c6cb",
+          "sha1": "9018a6835513fa5d0bee101cc88b229c7321bebb",
+          "md5": "0513d21c8e8042dd1789c397de85e70a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.commons",
+          "module": "commons-lang3",
+          "version": {
+            "requires": "3.20.0"
+          }
+        },
+        {
+          "group": "commons-codec",
+          "module": "commons-codec",
+          "version": {
+            "requires": "1.22.1"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha2"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0.0-alpha2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha2.jar",
+          "url": "toti-tcpip-1.0.0-alpha2.jar",
+          "size": 54366,
+          "sha512": "b568566cd2d4777a63a5af72ce343750cfd3d9f39976c6114b2cd0cee8676f49e4de3ac842e0eef92828e49a8184ad609a1967d3d983958ae64a6f095480db5d",
+          "sha256": "a70221b53e26f54f4d9fa1ed1abbbadc03b816d54587e76bd1ee319eb224c6cb",
+          "sha1": "9018a6835513fa5d0bee101cc88b229c7321bebb",
+          "md5": "0513d21c8e8042dd1789c397de85e70a"
+        }
+      ]
+    }
+  ]
+}

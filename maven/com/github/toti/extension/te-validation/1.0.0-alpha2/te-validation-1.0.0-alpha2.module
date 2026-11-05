@@ -1,0 +1,78 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.extension",
+    "module": "te-validation",
+    "version": "1.0.0-alpha2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha2.jar",
+          "url": "te-validation-1.0.0-alpha2.jar",
+          "size": 48404,
+          "sha512": "69800e1cd1bb3bc4cc3a33b67793ad104325b25cafa5fcc4fd9cdb766c317a2db9312d40ee3235caa1ca88a7d251d5c4ce8d752aca12fc0aec7c976451d85a53",
+          "sha256": "8f1e6bf45566b620a9baa18006a34a4a5f3712b26f42e6ab947a1c220485a344",
+          "sha1": "d3785624b8b3b42a2b3851e624fff04747e2dc67",
+          "md5": "c95207fc5cda977857a53875973c1ded"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha2"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha2.jar",
+          "url": "te-validation-1.0.0-alpha2.jar",
+          "size": 48404,
+          "sha512": "69800e1cd1bb3bc4cc3a33b67793ad104325b25cafa5fcc4fd9cdb766c317a2db9312d40ee3235caa1ca88a7d251d5c4ce8d752aca12fc0aec7c976451d85a53",
+          "sha256": "8f1e6bf45566b620a9baa18006a34a4a5f3712b26f42e6ab947a1c220485a344",
+          "sha1": "d3785624b8b3b42a2b3851e624fff04747e2dc67",
+          "md5": "c95207fc5cda977857a53875973c1ded"
+        }
+      ]
+    }
+  ]
+}
