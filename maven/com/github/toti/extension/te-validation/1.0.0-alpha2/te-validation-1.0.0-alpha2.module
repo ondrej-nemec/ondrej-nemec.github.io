@@ -73,6 +73,46 @@
           "md5": "c95207fc5cda977857a53875973c1ded"
         }
       ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha2-sources.jar",
+          "url": "te-validation-1.0.0-alpha2-sources.jar",
+          "size": 25283,
+          "sha512": "7d8b3a630c46a16fa0b534decf27ef8c3b7417180b3cd9dd85dcd74dc78c821e07aa8bb3c44901d7dd01a4e386bd3f636f92ecab57e4202a3a0ba173c463af68",
+          "sha256": "1bc908ce83b91746eef4d5939a97bc33efd5258fa962ec1f5819ac6a5f4800cd",
+          "sha1": "ebe26b73dcc164d9450b99a25940898fab6803da",
+          "md5": "60770e0b18e84d6bcfcf6f6e2d6c122c"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha2-javadoc.jar",
+          "url": "te-validation-1.0.0-alpha2-javadoc.jar",
+          "size": 215950,
+          "sha512": "d571e59ff81cd3cfead3add01248846d6be68dcfd6b4776d509ebf6f5b25f1b1849e58cd450859ee26d2957ef0a2b46ef1f9544d9efe355d29b298d83f275e3f",
+          "sha256": "6412fc41e6714b39ebaf999fe93660dd94301e16ad414b1ee9abb21772e469c1",
+          "sha1": "8699057c98ab9123ed7bc2353df9a4a049b50e3b",
+          "md5": "ea06425f7c516ef2375227a1fdd9feda"
+        }
+      ]
     }
   ]
 }

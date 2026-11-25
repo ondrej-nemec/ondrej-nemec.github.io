@@ -101,6 +101,46 @@
           "md5": "0513d21c8e8042dd1789c397de85e70a"
         }
       ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha2-sources.jar",
+          "url": "toti-tcpip-1.0.0-alpha2-sources.jar",
+          "size": 26474,
+          "sha512": "1b69ad7afecb03b4e9f1592d8fd4addf38f811ba094fe8209d372ab1a460067fa209dd2e92284d49a9432f8f4fbc2097e6f991ed92afa2ddc5ce75ec69e36e2e",
+          "sha256": "51462f3b0014c20aa91d2ce917aab990b9b40d44e3229ec8427e808fc51d16a7",
+          "sha1": "38d3c6f585a7a8eae02bed9e19437d307a9fe430",
+          "md5": "e9a213f368b16eff29afcff6bef7eab4"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha2-javadoc.jar",
+          "url": "toti-tcpip-1.0.0-alpha2-javadoc.jar",
+          "size": 201269,
+          "sha512": "92e9ebec1dd5daaca92bd3f1169812a92742792e4bfc1e01715b1f1f1ee047acd58867e593a5d5caac285602469d2257cdc2273bf2b93ead3eb070d6b5dcba94",
+          "sha256": "deaa812bf1e04572e2589a726f17f3fadce8faa92ec6c6157fe53f84fb3b96ec",
+          "sha1": "f5e5372bdd1ad0b229caa67de823e4efefca3816",
+          "md5": "1a6b1f86f98b10c5f55102db0bd669cb"
+        }
+      ]
     }
   ]
 }

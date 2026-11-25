@@ -87,6 +87,46 @@
           "md5": "4d11a512368b3028e6d2dcd690b3b0ec"
         }
       ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-translate-1.0.0-alpha2-sources.jar",
+          "url": "toti-translate-1.0.0-alpha2-sources.jar",
+          "size": 3262,
+          "sha512": "1f5fbd599914caf4105009b1e616dd9cd930bd236fc42d46ddece2cf59dc48b01479459f3f5f56b3319a465cfbabfb0ad6ab6221ecd4b2757fdabd87983e03f3",
+          "sha256": "cc24a882b78d96e41705147757039e93971735104a5f1ff4d7ec5f846997acea",
+          "sha1": "299d7d3b04bff4556b1e919ff84a30dc986d6070",
+          "md5": "72b498eb2657f3d90e753313c07b7207"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-translate-1.0.0-alpha2-javadoc.jar",
+          "url": "toti-translate-1.0.0-alpha2-javadoc.jar",
+          "size": 100765,
+          "sha512": "c78e3a031dd3d283d6463277f83e4a0de1d9810cecf0837e486803000fbbc5f79a5ff65009a5da52aa4e43c67ffc82ace05406d8db138124525ba32618a399ea",
+          "sha256": "176eaf87f6131d7796e0cef4c3a50f026b15c5c61b841796dc361c20c8d85702",
+          "sha1": "d71815a2e9d2ead0bad22ee8395e472657b7dcdd",
+          "md5": "68deab623b3a22ee9c0370fbe8465407"
+        }
+      ]
     }
   ]
 }

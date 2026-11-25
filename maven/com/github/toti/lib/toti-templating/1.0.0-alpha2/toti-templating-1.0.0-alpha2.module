@@ -87,6 +87,46 @@
           "md5": "e13954e3be4ad780464e13c6572a61f1"
         }
       ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-templating-1.0.0-alpha2-sources.jar",
+          "url": "toti-templating-1.0.0-alpha2-sources.jar",
+          "size": 32907,
+          "sha512": "1772695eef41670d1f0e676965c5426b7d045582a488716ecbc1b7a2add20e834d334006435dfb3afa374c045db17448322e356bacd7da2a81483e949fc913ec",
+          "sha256": "a5afd662fd25bd9d6fad307f7d915b79898e9c201d524242953339e45f850f92",
+          "sha1": "9048822aaa17036509ee82b2384d123cb1d1d4a7",
+          "md5": "eb1e610d128af0e4008447336f8b7242"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-templating-1.0.0-alpha2-javadoc.jar",
+          "url": "toti-templating-1.0.0-alpha2-javadoc.jar",
+          "size": 251909,
+          "sha512": "3f600567e6ead301f3f7cca37b6a2ba128d19f32e4fe342106c4d91a35bd26085a0843206325efd2cf4c6b2d273ede51cdd3a7c1aa8d32613489d4297748732f",
+          "sha256": "1a0c8af1469614bb3176b322a0a604f93879d37015036f4840f561d618d74c21",
+          "sha1": "441ef69b26c2b40d3eda6a28a52af60f84a32e69",
+          "md5": "1d63de4f6e29997da8fa98d95038fa2a"
+        }
+      ]
     }
   ]
 }

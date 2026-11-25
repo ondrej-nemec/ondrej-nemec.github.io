@@ -37,10 +37,10 @@
           "name": "toti-files-1.0.0-alpha2.jar",
           "url": "toti-files-1.0.0-alpha2.jar",
           "size": 58106,
-          "sha512": "654728676350a8fc8cad7c19e87f00c902ea84166aaed3eed9d91a624453585f1019a326b6761e305e2e533a2179831840e37a188a1ec2fdee0ba4cf3eefe64b",
-          "sha256": "92562f96d3077fb82e2ee1e0e3b8d0c7d6872fc273924115f57fc8e4928f5620",
-          "sha1": "ef713f6c898bf74983aedc44c1422962ec166925",
-          "md5": "83cf1b08409a78e8bef265bee0e4f21d"
+          "sha512": "c035641aebe021216c2f9f417b0a7f1e95357155cafc6f427ff594f06fadb39a52eb30ab9ff24f83aad5a5310bc89421ce89b8aa7ac52ef449f2a5fcc28cad4d",
+          "sha256": "59033d7e83749b598dec5e6154d33c30301da429cbecdd246c466acc17467990",
+          "sha1": "acc445174c8bf372ac0a8f01d64d3580b1ed95ce",
+          "md5": "1d53ef92c3adc4101e7730b0282f58cc"
         }
       ]
     },
@@ -67,10 +67,50 @@
           "name": "toti-files-1.0.0-alpha2.jar",
           "url": "toti-files-1.0.0-alpha2.jar",
           "size": 58106,
-          "sha512": "654728676350a8fc8cad7c19e87f00c902ea84166aaed3eed9d91a624453585f1019a326b6761e305e2e533a2179831840e37a188a1ec2fdee0ba4cf3eefe64b",
-          "sha256": "92562f96d3077fb82e2ee1e0e3b8d0c7d6872fc273924115f57fc8e4928f5620",
-          "sha1": "ef713f6c898bf74983aedc44c1422962ec166925",
-          "md5": "83cf1b08409a78e8bef265bee0e4f21d"
+          "sha512": "c035641aebe021216c2f9f417b0a7f1e95357155cafc6f427ff594f06fadb39a52eb30ab9ff24f83aad5a5310bc89421ce89b8aa7ac52ef449f2a5fcc28cad4d",
+          "sha256": "59033d7e83749b598dec5e6154d33c30301da429cbecdd246c466acc17467990",
+          "sha1": "acc445174c8bf372ac0a8f01d64d3580b1ed95ce",
+          "md5": "1d53ef92c3adc4101e7730b0282f58cc"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-files-1.0.0-alpha2-sources.jar",
+          "url": "toti-files-1.0.0-alpha2-sources.jar",
+          "size": 25851,
+          "sha512": "65b4ddbbfab9f70db9259ea0954bd87da7a37286f428a40d3b3b23aa4399d0e63776dd74842a240ec6efa1b8978b7dfed0a553611978503bc4128559b28c9fbc",
+          "sha256": "476d21030fe0f2aaef68508934d1bfef2014c3e3350b9fdd4c304c43e7b804c1",
+          "sha1": "96843d952e6b752ba372dfebdf539a95a3aa7fcb",
+          "md5": "f33989e928a6088d34a14ecd1fece107"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-files-1.0.0-alpha2-javadoc.jar",
+          "url": "toti-files-1.0.0-alpha2-javadoc.jar",
+          "size": 224336,
+          "sha512": "624f646814d7943598805cbde0b21b5aed0015903d63150c0cb43d2e8479762ace04cb9301f3c3b67846975f47cfeaca0d12b00fe98c42d20016da62b3c6823c",
+          "sha256": "ae83749b59ee8506ef500848d548e43bdde8c65cd84af821bc239831274fe6b9",
+          "sha1": "5bddb1df1d824ea9d366277a403ea542f72fb609",
+          "md5": "e4c673c57c28c77bb91d811d41decb73"
         }
       ]
     }

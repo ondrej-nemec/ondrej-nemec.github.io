@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.lib",
+    "module": "toti-tcpip",
+    "version": "1.0.0-alpha3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha3.jar",
+          "url": "toti-tcpip-1.0.0-alpha3.jar",
+          "size": 54390,
+          "sha512": "6d325ae4da71b67e970ff42ed6e58c1903bb0d65acc5c0a65909aab318b986a0585e601ec6ccdd322a51cd1b58c7f3c1ef4405f6b288f8be8e4a4c9d935ec39c",
+          "sha256": "e465abb5c8aa973911504e0ad557c6b67f872eb614e5b972889c9cafd2722cad",
+          "sha1": "51916aaced8b068cf685bc25304152c9c86b7d49",
+          "md5": "62e3cc21a4f3aad08fdc3326677cb6e0"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apache.commons",
+          "module": "commons-lang3",
+          "version": {
+            "requires": "3.20.0"
+          }
+        },
+        {
+          "group": "commons-codec",
+          "module": "commons-codec",
+          "version": {
+            "requires": "1.22.1"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha3.jar",
+          "url": "toti-tcpip-1.0.0-alpha3.jar",
+          "size": 54390,
+          "sha512": "6d325ae4da71b67e970ff42ed6e58c1903bb0d65acc5c0a65909aab318b986a0585e601ec6ccdd322a51cd1b58c7f3c1ef4405f6b288f8be8e4a4c9d935ec39c",
+          "sha256": "e465abb5c8aa973911504e0ad557c6b67f872eb614e5b972889c9cafd2722cad",
+          "sha1": "51916aaced8b068cf685bc25304152c9c86b7d49",
+          "md5": "62e3cc21a4f3aad08fdc3326677cb6e0"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha3-sources.jar",
+          "url": "toti-tcpip-1.0.0-alpha3-sources.jar",
+          "size": 26482,
+          "sha512": "3f8e60a78f1d291763bf983ef37baf1dd611393e02ab36abf6d773d5af9ec1f5f3f5d447ca606026bd49a952787309b4f7daf9bca91a1533f166d76c943daf05",
+          "sha256": "8c2dd4af2ae8516a91ccde9b3b7633aa7cb87b8a7c1708286d982db21b124913",
+          "sha1": "8f2136dacdec2a3aac37c65af975d5dbfccaa6bd",
+          "md5": "a7494f79878888f608e92f40094a7e08"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-tcpip-1.0.0-alpha3-javadoc.jar",
+          "url": "toti-tcpip-1.0.0-alpha3-javadoc.jar",
+          "size": 201272,
+          "sha512": "fad185712d0f060afdefb0bbe8e2c1797dc0d22b6bc92811e25cdc201372e448385decbbb141392f09652faa8339dbfc69ad59e0f503af4ac7f9e2b68362ee55",
+          "sha256": "81fef42d1abb6cf0780b95dddaf0b021e859e20ebc2f440536ba085bf86f4dea",
+          "sha1": "112aeabcb998fef15897ef0d51e6ad5610c3a235",
+          "md5": "581c4d7c25bd14f547f54ec61b087221"
+        }
+      ]
+    }
+  ]
+}

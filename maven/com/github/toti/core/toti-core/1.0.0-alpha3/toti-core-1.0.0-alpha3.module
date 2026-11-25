@@ -1,0 +1,195 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.core",
+    "module": "toti-core",
+    "version": "1.0.0-alpha3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-tcpip",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-core-1.0.0-alpha3.jar",
+          "url": "toti-core-1.0.0-alpha3.jar",
+          "size": 133416,
+          "sha512": "4d797629dc59f68bf0da7d919052b288cd81319e7eab07c1e21b1c1cf177ff803a90c648be59c407bd73bbc4dfd7a309b701d40b87de9c16b743fd66108d49b0",
+          "sha256": "0593269d023c0bf41828e2cb99c12e4fd455d54380f0ca8dc399c49dec427593",
+          "sha1": "e1cc730d8cd603bda18a4c92a89dd2ba9493b7ab",
+          "md5": "f145ca3feafa4ccb5b798686387c9a82"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.objenesis",
+          "module": "objenesis",
+          "version": {
+            "requires": "3.6"
+          }
+        },
+        {
+          "group": "net.bytebuddy",
+          "module": "byte-buddy",
+          "version": {
+            "requires": "1.18.14"
+          }
+        },
+        {
+          "group": "net.bytebuddy",
+          "module": "byte-buddy-agent",
+          "version": {
+            "requires": "1.18.14"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty",
+          "module": "jetty-server",
+          "version": {
+            "requires": "12.1.13"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty.http2",
+          "module": "jetty-http2-server",
+          "version": {
+            "requires": "12.1.13"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty",
+          "module": "jetty-alpn-server",
+          "version": {
+            "requires": "12.1.13"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty",
+          "module": "jetty-alpn-java-server",
+          "version": {
+            "requires": "12.1.13"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty.websocket",
+          "module": "jetty-websocket-jetty-api",
+          "version": {
+            "requires": "12.1.13"
+          }
+        },
+        {
+          "group": "org.eclipse.jetty.websocket",
+          "module": "jetty-websocket-jetty-server",
+          "version": {
+            "requires": "12.1.13"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-tcpip",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-core-1.0.0-alpha3.jar",
+          "url": "toti-core-1.0.0-alpha3.jar",
+          "size": 133416,
+          "sha512": "4d797629dc59f68bf0da7d919052b288cd81319e7eab07c1e21b1c1cf177ff803a90c648be59c407bd73bbc4dfd7a309b701d40b87de9c16b743fd66108d49b0",
+          "sha256": "0593269d023c0bf41828e2cb99c12e4fd455d54380f0ca8dc399c49dec427593",
+          "sha1": "e1cc730d8cd603bda18a4c92a89dd2ba9493b7ab",
+          "md5": "f145ca3feafa4ccb5b798686387c9a82"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-core-1.0.0-alpha3-sources.jar",
+          "url": "toti-core-1.0.0-alpha3-sources.jar",
+          "size": 60970,
+          "sha512": "bb09b0f32e443f0fc9342e9bec8c05f5f45b3fcee3b63317978b3f5be1ebdc20889936eba32f7c2b630578f0b28891525c209cc377f8f151ddb7377ec99d6d10",
+          "sha256": "0e8725fbd88e2b819cbc7eecda664f49fc06f4e5d1c97ed7411b12925c617320",
+          "sha1": "c5e56fd33e2da36e2ff83d8e28a7929b8ace30c5",
+          "md5": "7b79421986ca28459aa4bc6566ae6cf2"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-core-1.0.0-alpha3-javadoc.jar",
+          "url": "toti-core-1.0.0-alpha3-javadoc.jar",
+          "size": 356084,
+          "sha512": "834ebd7d632906a09f9b0c029dc0e9652e6492339520fc9adb05989c249218ff9fcee746ecb975d57f0155cc2cfabf71ff5913fd8ce3a19c8c30b092dce779fb",
+          "sha256": "6122309958f345eebf3c6c01a6ab93240e06c6703bfa5e5e89d724bd3ee78fc0",
+          "sha1": "e42ebdee8cac8bf2ac0227fccd316179df39cc86",
+          "md5": "5624eabb6904292394b68b8418861708"
+        }
+      ]
+    }
+  ]
+}

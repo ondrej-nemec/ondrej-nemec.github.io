@@ -87,6 +87,46 @@
           "md5": "cd692cbf3d588bfd9d2e2a0ed7ff9921"
         }
       ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-translator-1.0.0-alpha2-sources.jar",
+          "url": "te-translator-1.0.0-alpha2-sources.jar",
+          "size": 2149,
+          "sha512": "e2ad477822f46e208e22672b105e7e68c109ad6a5dbb784a8b9d2e4b3a9c4feee31a919b1ffc4e221ebe9dc061e678c6806aa086a6894265e3581ff6b86f72fe",
+          "sha256": "76bac71840462adbab111755754dbe2706239702187e41cb1b6aef5fed1eb0ce",
+          "sha1": "cd1d12efbe950f6e00a61eb3de8633267eb2cccc",
+          "md5": "0a4f9848a2f22e2ca178d6cec5693027"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-translator-1.0.0-alpha2-javadoc.jar",
+          "url": "te-translator-1.0.0-alpha2-javadoc.jar",
+          "size": 95643,
+          "sha512": "c307472fc7d6a2abc5b0c48fd3528d9fe611eaa6bda757780c1ed753588241b30cc7c4a4b4e10d5d7334ecd114e2c36efa3e92133e99fbbbbb333512770592ae",
+          "sha256": "fe20bb81f329a9fdca371cc5c8f311e42ee50bb22c927ffbb3f61c941a309f72",
+          "sha1": "6fa3915a8de9c376d0c191e48b217bfe9fe54fda",
+          "md5": "b45f7cfdced46e2f256b2606444ace88"
+        }
+      ]
     }
   ]
 }

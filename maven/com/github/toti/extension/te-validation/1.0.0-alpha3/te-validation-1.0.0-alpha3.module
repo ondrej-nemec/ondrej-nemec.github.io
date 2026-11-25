@@ -1,0 +1,118 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.extension",
+    "module": "te-validation",
+    "version": "1.0.0-alpha3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha3.jar",
+          "url": "te-validation-1.0.0-alpha3.jar",
+          "size": 48404,
+          "sha512": "69800e1cd1bb3bc4cc3a33b67793ad104325b25cafa5fcc4fd9cdb766c317a2db9312d40ee3235caa1ca88a7d251d5c4ce8d752aca12fc0aec7c976451d85a53",
+          "sha256": "8f1e6bf45566b620a9baa18006a34a4a5f3712b26f42e6ab947a1c220485a344",
+          "sha1": "d3785624b8b3b42a2b3851e624fff04747e2dc67",
+          "md5": "c95207fc5cda977857a53875973c1ded"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha3.jar",
+          "url": "te-validation-1.0.0-alpha3.jar",
+          "size": 48404,
+          "sha512": "69800e1cd1bb3bc4cc3a33b67793ad104325b25cafa5fcc4fd9cdb766c317a2db9312d40ee3235caa1ca88a7d251d5c4ce8d752aca12fc0aec7c976451d85a53",
+          "sha256": "8f1e6bf45566b620a9baa18006a34a4a5f3712b26f42e6ab947a1c220485a344",
+          "sha1": "d3785624b8b3b42a2b3851e624fff04747e2dc67",
+          "md5": "c95207fc5cda977857a53875973c1ded"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha3-sources.jar",
+          "url": "te-validation-1.0.0-alpha3-sources.jar",
+          "size": 25283,
+          "sha512": "7d8b3a630c46a16fa0b534decf27ef8c3b7417180b3cd9dd85dcd74dc78c821e07aa8bb3c44901d7dd01a4e386bd3f636f92ecab57e4202a3a0ba173c463af68",
+          "sha256": "1bc908ce83b91746eef4d5939a97bc33efd5258fa962ec1f5819ac6a5f4800cd",
+          "sha1": "ebe26b73dcc164d9450b99a25940898fab6803da",
+          "md5": "60770e0b18e84d6bcfcf6f6e2d6c122c"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-validation-1.0.0-alpha3-javadoc.jar",
+          "url": "te-validation-1.0.0-alpha3-javadoc.jar",
+          "size": 215952,
+          "sha512": "e870aaba6ef6eec7aaff8b08583e8de86b3eeea83638fd8d71d2e4710b13d5e8387afa565f2f43a4b71a4011f010673fc399d9cc5cd7e8659f370020ea288a50",
+          "sha256": "6f5111e2d967f9ce5fdb9db650f70f7df99c279c5906de80b5761345cd78c80b",
+          "sha1": "29232ad72e510257cf4742438392616e6ba2c102",
+          "md5": "939331c20725119520fcebc7fbdcfeb3"
+        }
+      ]
+    }
+  ]
+}

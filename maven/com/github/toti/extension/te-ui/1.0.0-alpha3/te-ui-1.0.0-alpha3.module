@@ -1,0 +1,160 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.extension",
+    "module": "te-ui",
+    "version": "1.0.0-alpha3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.extension",
+          "module": "te-validation",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.extension",
+          "module": "te-templating",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-ui-1.0.0-alpha3.jar",
+          "url": "te-ui-1.0.0-alpha3.jar",
+          "size": 55321,
+          "sha512": "d05605b3087ba90eeeaa70f0a703668a2eab1db577be0d3de54768c393826c276df45c17f207d4d9c876ed265e03df962652a289ad1d567598226eb0a4eede37",
+          "sha256": "f249e2b300005a6fd22d1f1b60a1544e98469b802e856927e31008aea93829d5",
+          "sha1": "78652236ecf1473f24227d414739268cd7a90604",
+          "md5": "07768db8538dbab1a86fad47fda55ed2"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.extension",
+          "module": "te-validation",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.extension",
+          "module": "te-templating",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-ui-1.0.0-alpha3.jar",
+          "url": "te-ui-1.0.0-alpha3.jar",
+          "size": 55321,
+          "sha512": "d05605b3087ba90eeeaa70f0a703668a2eab1db577be0d3de54768c393826c276df45c17f207d4d9c876ed265e03df962652a289ad1d567598226eb0a4eede37",
+          "sha256": "f249e2b300005a6fd22d1f1b60a1544e98469b802e856927e31008aea93829d5",
+          "sha1": "78652236ecf1473f24227d414739268cd7a90604",
+          "md5": "07768db8538dbab1a86fad47fda55ed2"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-ui-1.0.0-alpha3-sources.jar",
+          "url": "te-ui-1.0.0-alpha3-sources.jar",
+          "size": 30095,
+          "sha512": "23e34287cb5a25782eb996d81d76d2117b7983197edb5b04afdb7aac8aeebb99ec01ec5bfdffb5bbaa7305bbd6de26a599d8ad22e0fa54760611678b5a5eaedd",
+          "sha256": "1a54c6c4eec8962de83cca2bc983a5d3644d7bbc92c70fa5294b66883cd2ea0e",
+          "sha1": "51dab7c4eae997ae331d65646cf817e8435aa17c",
+          "md5": "bdc3be324ac0bbf3e4a66f6d87a859b3"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-ui-1.0.0-alpha3-javadoc.jar",
+          "url": "te-ui-1.0.0-alpha3-javadoc.jar",
+          "size": 233620,
+          "sha512": "16fdd3a7e69833531afc462f2ce41ba6c0bd73448233842c3d341500f5911b17f7863e07ab4d13ab2cb4fd8b5c893efcb2bdffc5e651570239473c6ee18484dc",
+          "sha256": "ef681c5572c336c68ded7a777ed5980343b29185209e76f34af84937a206af7e",
+          "sha1": "df9718986ddaae6def748e77dacadcbd95af4b82",
+          "md5": "084462da06ae73c871a718364bd9515c"
+        }
+      ]
+    }
+  ]
+}

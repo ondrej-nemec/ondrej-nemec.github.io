@@ -1,0 +1,118 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.lib",
+    "module": "toti-files",
+    "version": "1.0.0-alpha3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-files-1.0.0-alpha3.jar",
+          "url": "toti-files-1.0.0-alpha3.jar",
+          "size": 58106,
+          "sha512": "c035641aebe021216c2f9f417b0a7f1e95357155cafc6f427ff594f06fadb39a52eb30ab9ff24f83aad5a5310bc89421ce89b8aa7ac52ef449f2a5fcc28cad4d",
+          "sha256": "59033d7e83749b598dec5e6154d33c30301da429cbecdd246c466acc17467990",
+          "sha1": "acc445174c8bf372ac0a8f01d64d3580b1ed95ce",
+          "md5": "1d53ef92c3adc4101e7730b0282f58cc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-files-1.0.0-alpha3.jar",
+          "url": "toti-files-1.0.0-alpha3.jar",
+          "size": 58106,
+          "sha512": "c035641aebe021216c2f9f417b0a7f1e95357155cafc6f427ff594f06fadb39a52eb30ab9ff24f83aad5a5310bc89421ce89b8aa7ac52ef449f2a5fcc28cad4d",
+          "sha256": "59033d7e83749b598dec5e6154d33c30301da429cbecdd246c466acc17467990",
+          "sha1": "acc445174c8bf372ac0a8f01d64d3580b1ed95ce",
+          "md5": "1d53ef92c3adc4101e7730b0282f58cc"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-files-1.0.0-alpha3-sources.jar",
+          "url": "toti-files-1.0.0-alpha3-sources.jar",
+          "size": 25851,
+          "sha512": "65b4ddbbfab9f70db9259ea0954bd87da7a37286f428a40d3b3b23aa4399d0e63776dd74842a240ec6efa1b8978b7dfed0a553611978503bc4128559b28c9fbc",
+          "sha256": "476d21030fe0f2aaef68508934d1bfef2014c3e3350b9fdd4c304c43e7b804c1",
+          "sha1": "96843d952e6b752ba372dfebdf539a95a3aa7fcb",
+          "md5": "f33989e928a6088d34a14ecd1fece107"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-files-1.0.0-alpha3-javadoc.jar",
+          "url": "toti-files-1.0.0-alpha3-javadoc.jar",
+          "size": 224340,
+          "sha512": "2b1122a03d3c9c63d3df747b9eb7d2ac663dcd37894581392e1ccba2de417d489706d9ebc8b9a10b1c293698a8b377feee1dd08a06a46087dd201a4cb471ecb0",
+          "sha256": "9e57b8d8b5a61ee207c960f3f72c6514e88f49c0ec7c9c05d4cd387889ff821d",
+          "sha1": "f5b8afbfce1f96137f2b9cc1d68fcce0efadac0a",
+          "md5": "33a6ec80479659d514445479ca5b8954"
+        }
+      ]
+    }
+  ]
+}

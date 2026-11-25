@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.extension",
+    "module": "te-database",
+    "version": "1.0.0-alpha3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-database-1.0.0-alpha3.jar",
+          "url": "te-database-1.0.0-alpha3.jar",
+          "size": 2915,
+          "sha512": "95f7e86d65a7aeb4dbc2a8fdc44c174c65fdb43bdc98993c3146fc2746de3e0d52267b3b8350cd2be135dd97785b207fcfc4c688adb4001b462f8a54f4458e52",
+          "sha256": "123e413f446a800fd4f4ad8db361fec3cb51fc853b5cdbdb6f190de60274908a",
+          "sha1": "436e724c15e0018bd7c9514a24ab0aa343b79730",
+          "md5": "fc5486efdf0fc420f80199b936fb24ff"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.core",
+          "module": "toti-core",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-database",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "te-database-1.0.0-alpha3.jar",
+          "url": "te-database-1.0.0-alpha3.jar",
+          "size": 2915,
+          "sha512": "95f7e86d65a7aeb4dbc2a8fdc44c174c65fdb43bdc98993c3146fc2746de3e0d52267b3b8350cd2be135dd97785b207fcfc4c688adb4001b462f8a54f4458e52",
+          "sha256": "123e413f446a800fd4f4ad8db361fec3cb51fc853b5cdbdb6f190de60274908a",
+          "sha1": "436e724c15e0018bd7c9514a24ab0aa343b79730",
+          "md5": "fc5486efdf0fc420f80199b936fb24ff"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-database-1.0.0-alpha3-sources.jar",
+          "url": "te-database-1.0.0-alpha3-sources.jar",
+          "size": 1602,
+          "sha512": "30b09fc9eb0d6e2d58b929ec728c11efeb5282f202cc171c95e471b0f9ca405b6427648802d16de289cb839747363648edcbe8b57a7db6007ded626cc5459b6b",
+          "sha256": "2c42fb178cfc70a108d2d4e317aa9fce4bbf70d3562e50ec5dcd6b98b1b552f2",
+          "sha1": "a21a6b997aea0bc706bfa437fcd2e6a2f3bac3f4",
+          "md5": "9d36b545eacff909415ee63ab9079ee2"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-database-1.0.0-alpha3-javadoc.jar",
+          "url": "te-database-1.0.0-alpha3-javadoc.jar",
+          "size": 92810,
+          "sha512": "42794fa5030316449b4648ad99439b00d040359f1aa68e986707b81a73963f84324a833dae9a32270286b57d40ce2e866ac48c0917438fcba4df363338ac6be1",
+          "sha256": "604a0b1bde1f9386ff82499f952a17be760a4ad7b0893c25dd5cd8904fe9acc6",
+          "sha1": "e7e78d615edcd6dba77bb3f314b94b786f91e8b3",
+          "md5": "65ea7795a6db3378cb62b6f614736361"
+        }
+      ]
+    }
+  ]
+}

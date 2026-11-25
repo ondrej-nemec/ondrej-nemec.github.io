@@ -87,6 +87,46 @@
           "md5": "e4eaad0d5b2ac53b8d813eecdc260f11"
         }
       ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-templating-1.0.0-alpha2-sources.jar",
+          "url": "te-templating-1.0.0-alpha2-sources.jar",
+          "size": 9150,
+          "sha512": "91413cf330b86a022ad2affb110b603228bed7614e44af76e8260cb4d3d1742fc2af6f485f5810e8190e9c0b8a7eb0d88e3c31d44b8457b275b1833d98887914",
+          "sha256": "13a70eb069deb3247821eb17db7ec3197944d4a5b4ca58f13c0d3db35fc428a5",
+          "sha1": "9df6bec3b3f48cb949ca3eb5751dfcc9c0928108",
+          "md5": "e2616197af3938f5b11a8b171215703b"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-templating-1.0.0-alpha2-javadoc.jar",
+          "url": "te-templating-1.0.0-alpha2-javadoc.jar",
+          "size": 134825,
+          "sha512": "9a8a63f4faf5480305e7ba792db036eb9f55b906e5236b0faec11250b0178bdba19968b6d12fcaf2c133fcdba00ed2b69c57decfaab5aa12a980de2025001c2f",
+          "sha256": "5c8602b66e6e0f8c62509041db17faeb21d3386f9483451c4a455dd78f936f91",
+          "sha1": "9e734114f229287c1c4c402e49d7aec2b76782b5",
+          "md5": "34fe2003d7f1639b90aac3a6c8790ead"
+        }
+      ]
     }
   ]
 }

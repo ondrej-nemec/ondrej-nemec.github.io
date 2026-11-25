@@ -87,6 +87,46 @@
           "md5": "fc5486efdf0fc420f80199b936fb24ff"
         }
       ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-database-1.0.0-alpha2-sources.jar",
+          "url": "te-database-1.0.0-alpha2-sources.jar",
+          "size": 1602,
+          "sha512": "30b09fc9eb0d6e2d58b929ec728c11efeb5282f202cc171c95e471b0f9ca405b6427648802d16de289cb839747363648edcbe8b57a7db6007ded626cc5459b6b",
+          "sha256": "2c42fb178cfc70a108d2d4e317aa9fce4bbf70d3562e50ec5dcd6b98b1b552f2",
+          "sha1": "a21a6b997aea0bc706bfa437fcd2e6a2f3bac3f4",
+          "md5": "9d36b545eacff909415ee63ab9079ee2"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "te-database-1.0.0-alpha2-javadoc.jar",
+          "url": "te-database-1.0.0-alpha2-javadoc.jar",
+          "size": 92809,
+          "sha512": "100828b3faa62293a97da00557d569a3cd0e5ce67fb372696dcf6f491ab3e55848bef4a474df8249fb895d667e5f11ed534a63495174009b90957fd48a56ae85",
+          "sha256": "1d3251aa3a460450e43605ac3ffe9ad0f1612547da58eb6139e400916333e46d",
+          "sha1": "86deabf4bf4ea1135d22d4353847f1978441a7fd",
+          "md5": "09b78df561f76ba965141f3d3893fc2e"
+        }
+      ]
     }
   ]
 }

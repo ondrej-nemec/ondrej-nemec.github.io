@@ -1,0 +1,132 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.github.toti.lib",
+    "module": "toti-translate",
+    "version": "1.0.0-alpha3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.8.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-translate-1.0.0-alpha3.jar",
+          "url": "toti-translate-1.0.0-alpha3.jar",
+          "size": 6413,
+          "sha512": "6ee4a788739fdc40f96cc716c72af40ccb5292fc9d8cf5a8401f125cd1e8a89b3b984405197a8306a41044be8bbd9276bd24a17944c12779055234525c3cea23",
+          "sha256": "ce747a76740365186fd286de184a72180cfcc105da209d7a6b780a5a423f7816",
+          "sha1": "8247d0f89555afb86a3067b39edc4601d99f2051",
+          "md5": "4d11a512368b3028e6d2dcd690b3b0ec"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 21,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-common",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        },
+        {
+          "group": "com.github.toti.lib",
+          "module": "toti-files",
+          "version": {
+            "requires": "1.0.0-alpha3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "toti-translate-1.0.0-alpha3.jar",
+          "url": "toti-translate-1.0.0-alpha3.jar",
+          "size": 6413,
+          "sha512": "6ee4a788739fdc40f96cc716c72af40ccb5292fc9d8cf5a8401f125cd1e8a89b3b984405197a8306a41044be8bbd9276bd24a17944c12779055234525c3cea23",
+          "sha256": "ce747a76740365186fd286de184a72180cfcc105da209d7a6b780a5a423f7816",
+          "sha1": "8247d0f89555afb86a3067b39edc4601d99f2051",
+          "md5": "4d11a512368b3028e6d2dcd690b3b0ec"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-translate-1.0.0-alpha3-sources.jar",
+          "url": "toti-translate-1.0.0-alpha3-sources.jar",
+          "size": 3262,
+          "sha512": "1f5fbd599914caf4105009b1e616dd9cd930bd236fc42d46ddece2cf59dc48b01479459f3f5f56b3319a465cfbabfb0ad6ab6221ecd4b2757fdabd87983e03f3",
+          "sha256": "cc24a882b78d96e41705147757039e93971735104a5f1ff4d7ec5f846997acea",
+          "sha1": "299d7d3b04bff4556b1e919ff84a30dc986d6070",
+          "md5": "72b498eb2657f3d90e753313c07b7207"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "toti-translate-1.0.0-alpha3-javadoc.jar",
+          "url": "toti-translate-1.0.0-alpha3-javadoc.jar",
+          "size": 100769,
+          "sha512": "e6152c144d0dbdfd918943500a651ba743dcfd0c19a5f890a9cadc9289be16b488b515531f467281e24123f690bac8ed67fa899eee58f3d5caaa820c2b7a36aa",
+          "sha256": "ba107f0e8c0625db6789735f12407ed5bdbee933ed19db2625e92bf3eee81e0a",
+          "sha1": "a6002e243c55018382a3481f41837ecbc0e35170",
+          "md5": "e2f4b5b574683beefcfa720f9736f041"
+        }
+      ]
+    }
+  ]
+}
